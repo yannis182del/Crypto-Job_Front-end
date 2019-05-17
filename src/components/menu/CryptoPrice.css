@@ -1,0 +1,18 @@
+.btc-price {
+    margin: auto;
+    padding: 0.7rem 0 0.5rem 1.7rem;
+    text-align: center;
+    color: white;
+    display: flex;
+    justify-content: flex-start;
+    font-weight: 400;
+    font-size: 0.9rem;
+    font-family: Helvetica, sans-serif
+  }
+
+  @media (max-width: 800px) {
+    .btc-price  {
+    display: none
+    }
+  }
+  

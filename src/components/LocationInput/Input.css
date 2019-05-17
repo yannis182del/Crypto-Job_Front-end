@@ -1,0 +1,72 @@
+.input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 40px
+}
+
+.main-input {
+  box-shadow: 0 0 20px 5px rgba(80, 78, 78, 0.2);
+  padding-left: 15px;
+  padding-right: 40px;
+  padding-top: 20px;
+  padding-bottom: 15px;
+  margin: 6px 0;
+  border-top-width: 5px;
+  border-radius: 3px;
+  margin-left: 100px;
+  margin-right: 100px;
+  border: none;
+  width: 40%;
+  font-family: helvetica;
+  font-size: 1rem;
+  color: rgb(71, 69, 69)
+}
+
+.main-input::placeholder {
+  width: 92%;
+  display: inline-block;
+  height: 50px;
+  border: 0px;
+  color: rgb(159, 165, 170);
+  padding-left: 15px;
+  font-size: 14px;
+}
+
+
+
+.text_input-top {
+  font-weight: 200;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top:  120px;
+  font-size: 2rem;
+  margin-bottom: 2px;
+  text-align: center;
+}
+
+input:focus::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: transparent !important;
+}
+input:focus::-moz-placeholder { /* Firefox 19+ */
+ color: transparent !important;
+}
+input:focus:-ms-input-placeholder { /* IE 10+ */
+ color: transparent !important;
+}
+input:focus:-moz-placeholder { /* Firefox 18- */
+ color: transparent !important;
+}
+
+
+input:focus { /* Chrome/Opera/Safari */
+  outline: none;
+  box-shadow: 0 0 25px 12px rgba(80, 78, 78, 0.2);
+}
+
+@media (max-width: 800px) { 
+  .main-input {
+width: 85%;
+  }
+
+}
