@@ -1,11 +1,10 @@
 .menu {
-
 }
 
 .App-logo {
   display: block;
   text-indent: -9999px;
-  width: 200px;
+  width: 130px;
   height: 50px;
   background-size: 100px 82px;
   margin: auto;
@@ -76,7 +75,6 @@
   text-decoration: none;
 }
 
-
 .navbar {
   transition: top 0.6s;
   background: linear-gradient(
@@ -89,10 +87,9 @@
   background-color: #333;
   top: 0;
   width: 100%;
-position: fixed;
+  position: fixed;
   z-index: 999;
   height: 80px;
- 
 }
 
 .navbar--hidden {

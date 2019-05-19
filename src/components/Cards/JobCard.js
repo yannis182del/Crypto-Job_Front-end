@@ -3,7 +3,6 @@ import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TextInput from "../LocationInput/TextInput";
-import Menu from "../menu/Menu";
 
 import "../LocationInput/Input.css";
 
