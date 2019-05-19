@@ -4,6 +4,8 @@ import SearchResults from "react-filter-search";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TextInput from "../LocationInput/TextInput";
 
+
+
 import "../LocationInput/Input.css";
 
 import "./JobCard.scss";
@@ -34,7 +36,6 @@ class JobCard extends Component {
   };
 
   render() {
-    const { match } = this.props;
 
     if (this.state.isLoading === true) return <LoadingSpinner />;
     else {
@@ -69,7 +70,7 @@ class JobCard extends Component {
                       <div className="description">
                         <h5>{job.position_name}</h5>
                         <p classname="job-place">{job.workplace_name}</p>
-                        <p> {job.description}</p>
+                        <p>{job.description}</p>
                         <p className="read-more">
                           <p>{job.location}</p>
                           <p>
