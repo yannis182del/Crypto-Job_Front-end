@@ -5,6 +5,13 @@ import "./ArticleGrid.css";
 
 const Articles = ({ location }) => (
   <div>
+    <ArticlesHeader
+      location={location.state.location}
+      contract_type={location.state.contract_type}
+      img={location.state.img}
+      workplace_name={location.state.workplace_name}
+      position_name={location.state.position_name}
+    />
     <div className="grid article-component">
       <div className="flex-item">
         <div className="item">
