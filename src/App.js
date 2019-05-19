@@ -15,7 +15,7 @@ const App = () => (
     <Menu />
     <Switch>
       <Route exact path="/" component={JobCard} />
-      <Route  onUpdate={() => window.scrollTo(0, 0)} path="/job/:id" component={Articles} />
+      <Route path="/job/:id" component={Articles} />
     </Switch>
   </>
 );
