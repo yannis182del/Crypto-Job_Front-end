@@ -1,35 +1,40 @@
 import React from "react";
+import ArticlesHeader from "./ArticleHeader";
 import "./Article.css";
 import "./ArticleGrid.css";
 
 const Articles = ({ location }) => (
-    <div>
-  <div className="article-container">
-    <div className="flex-header">
-      <p>{location.state.location}</p>
-      <p>{location.state.contract_type}</p>
-    </div>
-    <div  className="article-title">
-      <img className="article-img" src={location.state.img} alt="logo" />{" "}
-    <p className="article-workplace_name">{location.state.workplace_name}</p>
-    <h2>{location.state.position_name}</h2>
-    </div>
-  </div>
-    <div className="grid">
-    <div className="flex-item ">
-    <div className="item1">
-    <h4>Compensation</h4>
-    <p>{location.state.Compensation}</p>
-    </div>
-    <div className="item2">
-    <h4>Skills</h4>
-    {location.state.skills}
-    </div>
-    </div>
-    <div className="item-description">
-    <h4>Job Description</h4>
-<p>{location.state.description}</p>
-    </div>
+  <div>
+    <div className="grid article-component">
+      <div className="flex-item">
+        <div className="item">
+          <h4 className="title-article">Compensation</h4>
+          <p>{location.state.Compensation}</p>
+        </div>
+        <div className="item">
+          <h4 className="title-article">Skills</h4>
+          {location.state.skills}
+        </div>
+        <div className="item">
+          <h4 className="title-article">Starting Date</h4>
+          {location.state.starting_date}
+        </div>
+        <div className="item">
+          <h4 className="title-article">Contract Type</h4>
+          {location.state.contract_type}
+        </div>
+        <div className="item">
+          <h4>Field</h4>
+          <span className={location.state.type === "Tech" ? "red" : "blue"}>
+            {location.state.type}
+          </span>
+          {console.log(location.state.type)}
+        </div>
+      </div>
+      <div className="item-description">
+        <h4 className="title-article">Job Description</h4>
+        <p>{location.state.description}</p>
+      </div>
     </div>
   </div>
 );
