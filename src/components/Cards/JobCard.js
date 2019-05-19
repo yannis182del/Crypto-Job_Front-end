@@ -35,11 +35,13 @@ class JobCard extends Component {
 
   render() {
     const { match } = this.props;
+
     if (this.state.isLoading === true) return <LoadingSpinner />;
     else {
       const { data, value } = this.state;
       return (
         <>
+          <TextInput class="text_input-top" />
           <div className="input-container">
             <input
               onFocus="this.placeholder = ''"

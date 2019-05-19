@@ -1,8 +1,8 @@
 import React from 'react'
+import "./Article.css"
 
 const Articles = ({ location }) => (
- <div>
-<h1>Hello</h1>
+ <div className="article-container">
 <h1>{location.state.workplace_name}</h1>
 <h2>{location.state.position_name}</h2>
 <h2>{location.state.description}</h2>

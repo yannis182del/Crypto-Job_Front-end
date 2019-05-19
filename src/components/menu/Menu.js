@@ -7,7 +7,7 @@ import "./menu.css";
 import { ReactComponent as Logo } from "../../Images/logo.svg";
 
 class Menu extends Component {
-  constructor(props){
+  constructor(props) {
     super(props);
     this.state = {
       prevScrollpos: window.pageYOffset,
@@ -39,9 +39,11 @@ class Menu extends Component {
     return (
       <div>
         <div className="menu">
-          <nav  className={classnames("navbar", {
-          "navbar--hidden": !this.state.visible
-        })}>
+          <nav
+            className={classnames("navbar", {
+              "navbar--hidden": !this.state.visible
+            })}
+          >
             <ul className="nav-list">
               <li>
                 {" "}
