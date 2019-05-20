@@ -50,10 +50,8 @@ $color_grey_dark: #a2a2a2;
     list-style: none;
   }
 
-
   .description {
     padding: 1rem;
-    background: $color_white;
     position: relative;
     z-index: 1;
     h5,
@@ -69,7 +67,6 @@ $color_grey_dark: #a2a2a2;
     .apply-job {
       display: flex;
       justify-content: flex-end;
-      border: 1px solid blueviolet;
       border-radius: 4px;
       padding: 3px;
     }
@@ -88,17 +85,9 @@ $color_grey_dark: #a2a2a2;
   p {
     position: relative;
     margin: 0.8rem 0 0;
+    font-size: 15px;
     &:first-of-type {
       margin-top: 1.25rem;
-      &:before {
-        content: "";
-        position: absolute;
-        height: 3px;
-        background: $color_prime;
-        width: 25px;
-        top: -0.75rem;
-        border-radius: 3px;
-      }
     }
   }
   &:hover {
@@ -175,3 +164,15 @@ img {
   font-size: 1rem;
 }
 
+.label-green {
+  background-color: #52dc90;
+  padding: 2px 5px;
+  border-radius: 15px;
+  color: white;
+}
+
+.job-desc,
+.job-place {
+  color: rgb(125, 137, 147);
+  font-size: 14px;
+}
