@@ -4,8 +4,6 @@ import SearchResults from "react-filter-search";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TextInput from "../LocationInput/TextInput";
 
-
-
 import "../LocationInput/Input.css";
 
 import "./JobCard.scss";
@@ -36,7 +34,6 @@ class JobCard extends Component {
   };
 
   render() {
-
     if (this.state.isLoading === true) return <LoadingSpinner />;
     else {
       const { data, value } = this.state;
@@ -69,13 +66,12 @@ class JobCard extends Component {
                       </div>
                       <div className="description">
                         <h5>{job.position_name}</h5>
-                        <p classname="job-place">{job.workplace_name}</p>
-                        <p>{job.description}</p>
+                        <p className="job-place">at {job.workplace_name}</p>
+                        <p className="job-desc">{job.job_intro}</p>
                         <p className="read-more">
-                          <p>{job.location}</p>
+                          <p className="label-green">{job.location}</p>
                           <p>
                             <span className="apply-job">
-                              {" "}
                               <Link
                                 className="link-apply"
                                 to={{
@@ -83,8 +79,8 @@ class JobCard extends Component {
                                   state: job
                                 }}
                               >
-                                View more
-                              </Link>{" "}
+                                Apply
+                              </Link>
                             </span>
                           </p>
                         </p>
