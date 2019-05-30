@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
-import { BrowserRouter as Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import TextInput from "../LocationInput/TextInput";
+
+import { ReactComponent as Loupe } from "../../Images/loupe.svg";
 
 import "../LocationInput/Input.css";
 
 import "./JobCard.scss";
-
-const url = "https://cryptoapiforpersonal.herokuapp.com/job"
 
 class JobCard extends Component {
   constructor(props) {
@@ -20,8 +20,8 @@ class JobCard extends Component {
     };
   }
 
-  componentDidMount() {
-    fetch(url)
+  componentWillMount() {
+    fetch("https://cryptoapiforpersonal.herokuapp.com/job")
       .then(data => data.json())
       .then(result =>
         this.setState({
@@ -41,12 +41,11 @@ class JobCard extends Component {
       const { data, value } = this.state;
       return (
         <>
-          <TextInput class="text_input-top" />
           <div className="input-container">
             <input
               onFocus="this.placeholder = ''"
               className="main-input"
-              placeholder="location..."
+              placeholder="Location.."
               type="text"
               value={this.state.value}
               onChange={this.handleChange}
