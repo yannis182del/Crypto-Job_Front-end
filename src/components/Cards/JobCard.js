@@ -41,7 +41,6 @@ class JobCard extends Component {
       const { data, value } = this.state;
       return (
         <>
-          <TextInput class="text_input-top" />
           <div className="input-container">
             <input
               onFocus="this.placeholder = ''"

@@ -1,14 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap");
-
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
 .input-container {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-direction: column;
   margin-top: 40px;
+ 
 }
 
 .main-input {
+
   padding-left: 15px;
   padding-right: 40px;
   padding-top: 20px;
@@ -29,6 +31,14 @@
   font-size: 20px;
   line-height: 23px;
   letter-spacing: -0.02em;
+  
+}
+
+.search input { text-indent: 32px;}
+.search .fa-search { 
+  position: absolute;
+  top: 10px;
+  left: 10px;
 }
 
 
