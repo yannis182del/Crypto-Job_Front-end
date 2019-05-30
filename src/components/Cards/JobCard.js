@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Link } from "react-router-dom";
 import TextInput from "../LocationInput/TextInput";
 
 import "../LocationInput/Input.css";
 
 import "./JobCard.scss";
+
+const url = "https://cryptoapiforpersonal.herokuapp.com/job"
 
 class JobCard extends Component {
   constructor(props) {
@@ -18,8 +20,8 @@ class JobCard extends Component {
     };
   }
 
-  componentWillMount() {
-    fetch("https://cryptoapiforpersonal.herokuapp.com/job")
+  componentDidMount() {
+    fetch(url)
       .then(data => data.json())
       .then(result =>
         this.setState({
