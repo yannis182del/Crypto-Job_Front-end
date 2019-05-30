@@ -1,12 +1,12 @@
 import React, { Component } from "react";
-import './CryptoPrice.css'
+import "./CryptoPrice.css";
 
 export default class CrytoPrice extends Component {
   constructor(props) {
     super(props);
     this.state = {
       btc: [],
-      eth: [],
+      eth: []
     };
   }
   componentDidMount() {
@@ -23,12 +23,11 @@ export default class CrytoPrice extends Component {
   }
 
   render() {
-    return(
+    return (
       <div className="price-container">
-      <p className="btc-price">BTC: $ {this.state.btc}</p>
-      <p className="btc-price">ETH: $ {this.state.eth}</p>
+        <p className="btc-price">BTC: $ {this.state.btc}</p>
+        <p className="btc-price">ETH: $ {this.state.eth}</p>
       </div>
-    )
-    
+    );
   }
 }

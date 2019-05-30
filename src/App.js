@@ -3,7 +3,6 @@ import { BrowserRouter } from "react-router-dom";
 import { Route, Switch } from "react-router";
 import ReactDOM from "react-dom";
 import Menu from "./components/menu/Menu";
-import TextInput from "./components/LocationInput/TextInput";
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
 import ScrollToTop from "./components/Scrolling/ScrollToTop"
