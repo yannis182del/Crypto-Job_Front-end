@@ -2,13 +2,9 @@ import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-import TextInput from "../LocationInput/TextInput";
-
-import { ReactComponent as Loupe } from "../../Images/loupe.svg";
 
 import "../LocationInput/Input.css";
-
-import "./JobCard.scss";
+import "./JobCard.css";
 
 class JobCard extends Component {
   constructor(props) {
@@ -60,31 +56,19 @@ class JobCard extends Component {
                 {results.map((job, id) => (
                   <div key={id}>
                     <div key={job._id} className="blog-card">
-                      <div className="meta">
-                        <div className="photo">
-                          <img src={job.img} alt="logo" />{" "}
-                        </div>
-                      </div>
+                      <div className="meta" />
                       <div className="description">
-                        <h5>{job.position_name}</h5>
-                        <p className="job-place">at {job.workplace_name}</p>
-                        <p className="job-desc">{job.job_intro}</p>
-                        <p className="read-more">
-                          <p className="label-green">{job.location}</p>
-                          <p>
-                            <span className="apply-job">
-                              <Link
-                                className="link-apply"
-                                to={{
-                                  pathname: `/job/${job._id}`,
-                                  state: job
-                                }}
-                              >
-                                Apply
-                              </Link>
-                            </span>
-                          </p>
-                        </p>
+                        <Link
+                          className="link-apply"
+                          to={{
+                            pathname: `/job/${job._id}`,
+                            state: job
+                          }}
+                        >
+                          <h5 className="position-name">{job.position_name}</h5>
+                        </Link>
+                        <p className="place">{job.workplace_name}</p>
+                        <p className="job-desc">{job.location}</p>
                       </div>
                     </div>
                   </div>
