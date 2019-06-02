@@ -3,6 +3,8 @@ import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
+
+
 import "../LocationInput/Input.css";
 import "./JobCard.css";
 
@@ -38,10 +40,11 @@ class JobCard extends Component {
       return (
         <>
           <div className="input-container">
+          <span class="fa fa-search"></span>
             <input
               onFocus="this.placeholder = ''"
               className="main-input"
-              placeholder="Location.."
+              placeholder="Find A Job..."
               type="text"
               value={this.state.value}
               onChange={this.handleChange}
