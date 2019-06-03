@@ -1,38 +1,27 @@
 import React from "react";
+import GradientButton from "../Buttons/GradientButton";
 import "./Article.css";
-import "./ArticleGrid.css";
+import GradiendButton from "../Buttons/GradientButton";
 
 export default function ArticleComponent(props) {
   return (
-    <div className="grid article-component">
-      <div className="flex-item">
-        <div className="item">
-          <h4 className="title-article">Compensation</h4>
-          <p>{props.Compensation}</p>
-        </div>
-        <div className="item">
-          <h4 className="title-article">Skills</h4>
-          {props.skills}
-        </div>
-        <div className="item">
-          <h4 className="title-article">Starting Date</h4>
-          {props.starting_date}
-        </div>
-        <div className="item">
-          <h4 className="title-article">Contract Type</h4>
-          {props.contract_type}
-        </div>
-        <div className="item">
-          <h4>Field</h4>
-          <span className={props.type === "Tech" ? "red" : "blue"}>
-            {props.type}
-          </span>
+    <div>
+      <div className="header-component">
+        <h4 className="position-name-article">{props.position_name}</h4>
+        <p className="location">
+          <span className="workplace-name">{props.workplace_name}</span>{" "}
+          <span className="location-name"> - {props.location}</span>
+        </p>
+        <p className="contract-type">{props.contract_type}</p>
+        <div className="main-content">
+          <h3 className="about">About Us</h3>
+          <p className="about-description">{props.description}</p>
+          <p className="about-description">{props.description}</p>
+          <p className="about-description">{props.description}</p>
+          <p className="about-description">{props.description}</p>
         </div>
       </div>
-      <div className="item-description">
-        <h4 className="title-article">Job Description</h4>
-        <p>{props.description}</p>
-      </div>
+      <GradiendButton link={props.link}/>
     </div>
   );
 }
