@@ -1,5 +1,4 @@
 import React from "react";
-import GradientButton from "../Buttons/GradientButton";
 import "./Article.css";
 import GradiendButton from "../Buttons/GradientButton";
 

@@ -52,3 +52,13 @@
   padding: 2px 4px 2px 4px;
   margin-left: 10px;
 }
+
+@media only screen 
+    and (min-device-width: 375px) 
+    and (min-device-height: 812px) 
+    and (-webkit-device-pixel-ratio: 3)
+    and (orientation: portrait) { 
+  .header-component {
+      height: 600px;
+  }
+}

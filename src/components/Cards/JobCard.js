@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as  Route, Link } from "react-router-dom";
 
 import "../LocationInput/Input.css";
 import "./JobCard.css";
@@ -38,9 +38,8 @@ class JobCard extends Component {
       return (
         <>
           <div className="input-container">
-          <span class="fa fa-search"></span>
+          <span className="fa fa-search"></span>
             <input
-              onFocus="this.placeholder = ''"
               className="main-input"
               placeholder="Find A Job..."
               type="text"
