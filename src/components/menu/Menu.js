@@ -53,7 +53,7 @@ class Menu extends Component {
                 <p className="title">
                   <Logo
                     className="App-logo"
-                    ariaLabel="logo"
+                    aria-label="logo"
                     onClick={() => {
                       window.location = "/";
                     }}

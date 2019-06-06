@@ -1,6 +1,6 @@
 import React from "react";
 import "./Article.css";
-import "./ArticleGrid.css";
+
 
 export default function ArticleHeader(props) {
   return (

@@ -14,7 +14,7 @@ const App = () => (
   <>
       <Logo
        className="App-logo"
-       ariaLabel="logo"
+       aria-label="logo"
        onClick={() => { window.location = "/"}}/>
     <Switch>
       <Route exact path="/" component={JobCard} />
