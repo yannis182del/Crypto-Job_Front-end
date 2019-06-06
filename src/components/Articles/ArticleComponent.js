@@ -15,12 +15,10 @@ export default function ArticleComponent(props) {
         <div className="main-content">
           <h3 className="about">About Us</h3>
           <p className="about-description">{props.description}</p>
-          <p className="about-description">{props.description}</p>
-          <p className="about-description">{props.description}</p>
-          <p className="about-description">{props.description}</p>
+          <h3 className="about">Job Overview</h3>
         </div>
       </div>
       <GradiendButton link={props.link}/>
     </div>
-  );
+  )
 }

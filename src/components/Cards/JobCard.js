@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
-import { BrowserRouter as  Route, Link } from "react-router-dom";
+import { BrowserRouter as Route, Link } from "react-router-dom";
 
 import "../LocationInput/Input.css";
 import "./JobCard.css";
@@ -38,7 +38,7 @@ class JobCard extends Component {
       return (
         <>
           <div className="input-container">
-          <span className="fa fa-search"></span>
+            <span className="fa fa-search" />
             <input
               className="main-input"
               placeholder="Find A Job..."
