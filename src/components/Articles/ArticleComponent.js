@@ -20,6 +20,7 @@ export default function ArticleComponent(props) {
         </div>
       </div>
       <GradiendButton link={props.link}/>
+      <Recommended />
     </div>
   )
 }
