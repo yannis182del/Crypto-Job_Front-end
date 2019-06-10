@@ -1,6 +1,7 @@
 import React from "react";
 import "./Article.css";
 import GradiendButton from "../Buttons/GradientButton";
+import Recommended from "../Cards/Recommended"
 
 export default function ArticleComponent(props) {
   return (
@@ -19,6 +20,7 @@ export default function ArticleComponent(props) {
         </div>
       </div>
       <GradiendButton link={props.link}/>
+      <Recommended />
     </div>
   )
 }
