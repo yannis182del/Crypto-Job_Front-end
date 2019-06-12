@@ -1,6 +1,7 @@
 /*PEN STYLES*/
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
+
 .blog-card {
   border: 10px;
   background-color: #201d3e;
@@ -10,7 +11,7 @@
 }
 
 .position-name {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
@@ -22,7 +23,7 @@
 
 .place {
   color: #3eecac;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -32,7 +33,7 @@
 
 .job-desc {
   color: #10b7e0;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
 }
 
 .link-apply {
