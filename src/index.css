@@ -1,8 +1,10 @@
 :root {
   --ftFamily: "Roboto", sans-serif;
   --bgPrimary: #201d3e;
+  --txtColorPrimary: #ffffff;
+  --textColorSecondary: #3eecac;
+  --BoldFontWeight: 700
 }
-
 
 html {
   height: 100%;
@@ -13,23 +15,13 @@ body {
   padding: 0;
   font-family: sans-serif;
   height: 100%;
-  background:  #16132E;;
+  background: #16132e;
 }
 
 .App-logo {
   display: block;
-  text-indent: -9999px;
   width: 210px;
-  height: 50px;
-  background-size: 100px 82px;
-  margin: 20px auto;
-  padding: 1.1rem;
+  margin: 10px auto;
+  padding: 1rem;
   text-align: center;
-  color: white;
-  display: flex;
-  justify-content: flex-start;
-  font-size: 1.1rem;
-  padding: 0;
-  padding-bottom: 20px;
 }
-
