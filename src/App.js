@@ -5,18 +5,22 @@ import ReactDOM from "react-dom";
 
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
-import ScrollToTop from "./components/Scrolling/ScrollToTop"
-import "./index.css";
+import ScrollToTop from "./components/Scrolling/ScrollToTop";
 import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
 import Recommended from "./components/Cards/Recommended";
+
+import "./index.css";
 
 
 const App = () => (
   <>
-      <Logo
-       className="App-logo"
-       aria-label="logo"
-       onClick={() => { window.location = "/"}}/>
+    <Logo
+      className="App-logo"
+      aria-label="logo"
+      onClick={() => {
+        window.location = "/";
+      }}
+    />
     <Switch>
       <Route exact path="/" component={JobCard} />
       <Route path="/job/:id" component={Articles} />
@@ -27,8 +31,8 @@ const App = () => (
 
 ReactDOM.render(
   <BrowserRouter>
-  <ScrollToTop>
-    <App />
+    <ScrollToTop>
+      <App />
     </ScrollToTop>
   </BrowserRouter>,
   document.getElementById("root")
