@@ -8,6 +8,7 @@ import Articles from "./components/Articles/Articles";
 import ScrollToTop from "./components/Scrolling/ScrollToTop"
 import "./index.css";
 import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
+import Recommended from "./components/Cards/Recommended";
 
 
 const App = () => (
@@ -19,6 +20,7 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={JobCard} />
       <Route path="/job/:id" component={Articles} />
+      <Route path="/job/:id" component={Recommended} />
     </Switch>
   </>
 );

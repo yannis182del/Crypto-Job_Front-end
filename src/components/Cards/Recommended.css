@@ -16,9 +16,10 @@
 
 @media screen and (max-width: 600px) {
   .column {
-    width: 100%;
+    width: 50%;
     display: block;
-    margin-bottom: 20px;
+    padding: 1px 0px 2px 10px;
+    margin: 10px 15px 15px 15px;
   }
 }
 
@@ -26,6 +27,6 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   padding: 16px;
   text-align: center;
-  background-color: #f1f1f1;
-  margin-top: 20px;
+  background-color: #201d3e;
+  
 }
