@@ -17,7 +17,7 @@
   font-size: 25px;
   background: radial-gradient(
     12.5px at 35.45% 40.02%,
-    #3eecac 0%,
+    var(--textColorSecondary) 0%,
     #08aeea 100%
   );
   -webkit-background-clip: text;
@@ -33,7 +33,7 @@
   width: 40%;
   font-family: "Roboto", sans-serif;
   font-size: 1rem;
-  color: #ffffff;
+  color: var(--txtColorPrimary);
   background: #201d3e;
   font-style: normal;
   font-weight: normal;
@@ -59,7 +59,7 @@
   border: 0px;
   color: rgb(159, 165, 170);
   font-size: 1rem;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
 }
 
 .text_input-top {
