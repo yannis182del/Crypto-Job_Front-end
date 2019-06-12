@@ -2,30 +2,28 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 
-
 .blog-card {
   border: 10px;
   background-color: #201d3e;
-  margin: 2px 10px 2px 10px;
   border-radius: 12px;
   padding: 1px 0px 2px 10px;
   margin: 10px 15px 15px 15px;
 }
 
-.position-name  {
-  font-family: "Roboto", sans-serif;
+.position-name {
+  font-family: var(--ftFamily);
   font-style: normal;
   font-weight: 700;
   font-size: 18px;
   line-height: 21px;
   color: #ffffff;
   text-decoration: none;
-  margin-bottom: 7px
+  margin-bottom: 7px;
 }
 
 .place {
   color: #3eecac;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -34,8 +32,8 @@
 }
 
 .job-desc {
-  color: #10B7E0;
-  font-family: "Roboto", sans-serif;
+  color: #10b7e0;
+  font-family: var(--ftFamily);
 }
 
 .link-apply {

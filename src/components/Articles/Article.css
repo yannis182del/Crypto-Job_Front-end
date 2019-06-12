@@ -12,14 +12,14 @@
 }
 
 .position-name-article {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   font-weight: 700;
   margin-left: 10px;
   color: white;
 }
 
 .location {
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   font-weight: 400;
 }
 
@@ -34,20 +34,20 @@
 
 .contract-type {
   color: #575473;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   margin-left: 10px;
 }
 
 .about {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   margin-top: 10%;
   margin-left: 10px;
 }
 
 .about-description {
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: var(--ftFamily);
   padding: 2px 4px 2px 4px;
   margin-left: 10px;
   line-height: 22px;

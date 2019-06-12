@@ -1,3 +1,8 @@
+:root {
+  --ftFamily: "Roboto", sans-serif;
+}
+
+
 html {
   height: 100%;
 }

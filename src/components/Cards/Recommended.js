@@ -1,7 +1,7 @@
 import React from "react";
-
+import { BrowserRouter as Route, Link } from "react-router-dom";
 import { useFetch } from "../../Hooks";
-import "./Recommended.css"
+import "./Recommended.css";
 
 export default function Recommended() {
   const url = "https://cryptoapiforpersonal.herokuapp.com/job";
@@ -12,10 +12,20 @@ export default function Recommended() {
       {data.map(job => {
         if (job.location === "remote") {
           return (
-            <div className="recommended-component">
-              <h2>{job.position_name}</h2>
-              <p>{job.location}</p>
-              <p>{job.position_name}</p>
+            <div class="column">
+              <div class="card">
+                <Link
+                  className="link-apply"
+                  to={{
+                    pathname: `/job/${job._id}`,
+                    state: job
+                  }}
+                >
+                  <h3 className="position-name">{job.position_name}</h3>
+                </Link>
+                <p className="place">{job.workplace_name}</p>
+                <p className="job-desc">{job.location}</p>
+              </div>
             </div>
           );
         }
