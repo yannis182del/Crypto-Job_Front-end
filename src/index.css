@@ -3,7 +3,9 @@
   --bgPrimary: #201d3e;
   --txtColorPrimary: #ffffff;
   --textColorSecondary: #3eecac;
-  --BoldFontWeight: 700
+  --textColorBlue:  #10b7e0;
+  --BoldFontWeight: 700;
+  --PrimaryFontSize: 18px
 }
 
 html {

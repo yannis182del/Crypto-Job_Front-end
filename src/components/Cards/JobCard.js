@@ -6,6 +6,8 @@ import { BrowserRouter as Route, Link } from "react-router-dom";
 import "../LocationInput/Input.css";
 import "./JobCard.css";
 
+const url = 'https://cryptoapiforpersonal.herokuapp.com/job'
+
 class JobCard extends Component {
   constructor(props) {
     super(props);
@@ -16,8 +18,8 @@ class JobCard extends Component {
     };
   }
 
-  componentWillMount() {
-    fetch("https://cryptoapiforpersonal.herokuapp.com/job")
+  componentDidMount() {
+    fetch(url)
       .then(data => data.json())
       .then(result =>
         this.setState({
@@ -67,6 +69,7 @@ class JobCard extends Component {
                         >
                           <h5 className="position-name">{job.position_name}</h5>
                         </Link>
+
                         <p className="place">{job.workplace_name}</p>
                         <p className="job-desc">{job.location}</p>
                       </div>

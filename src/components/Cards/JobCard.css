@@ -13,7 +13,7 @@
 .position-name {
   font-style: normal;
   font-weight: var(--BoldFontWeight);
-  font-size: 18px;
+  font-size: var(--PrimaryFontSize);
   line-height: 21px;
   color: var(--txtColorPrimary);
   text-decoration: none;
@@ -24,13 +24,13 @@
   color: var(--textColorSecondary);
   font-style: normal;
   font-weight: 400;
-  font-size: 18px;
+  font-size: var(--PrimaryFontSize);
   line-height: 21px;
   margin-bottom: 2px;
 }
 
 .job-desc {
-  color: #10b7e0;
+  color: var(--textColorBlue);
 }
 
 .link-apply {

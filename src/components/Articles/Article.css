@@ -28,7 +28,7 @@
 }
 
 .location-name {
-  color: #10b7e0;
+  color: var(--textColorBlue);
 }
 
 .contract-type {
