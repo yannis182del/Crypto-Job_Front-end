@@ -6,7 +6,7 @@ import { BrowserRouter as Route, Link } from "react-router-dom";
 import "../LocationInput/Input.css";
 import "./JobCard.css";
 
-const url = 'https://cryptoapiforpersonal.herokuapp.com/job'
+const url = "https://cryptoapiforpersonal.herokuapp.com/job";
 
 class JobCard extends Component {
   constructor(props) {
@@ -68,10 +68,10 @@ class JobCard extends Component {
                           }}
                         >
                           <h5 className="position-name">{job.position_name}</h5>
-                        </Link>
 
-                        <p className="place">{job.workplace_name}</p>
-                        <p className="job-desc">{job.location}</p>
+                          <p className="place">{job.workplace_name}</p>
+                          <p className="job-desc">{job.location}</p>
+                        </Link>
                       </div>
                     </div>
                   </div>
