@@ -1,6 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router } from "react-router-dom";
-import { Route, Switch } from "react-router";
+import { Route } from "react-router";
 import ReactDOM from "react-dom";
 
 import JobCard from "./components/Cards/JobCard";
@@ -11,7 +11,6 @@ import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
 
 import "./index.css";
 
-
 const App = () => (
   <>
     <Logo
@@ -21,11 +20,9 @@ const App = () => (
         window.location = "/";
       }}
     />
-    <Switch>
-      <Route exact path="/" component={JobCard} />
-      <Route path="/job/:id" component={Articles} />
-      {/* <Route path="/job/:id" component={Recommended} /> */}
-    </Switch>
+    <Route exact path="/" component={JobCard} />
+    <Route path="/job/:id" component={Articles} />
+    {/* <Route path="/job/:id" component={Recommended} /> */}
   </>
 );
 
