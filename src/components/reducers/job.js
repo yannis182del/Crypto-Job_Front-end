@@ -14,6 +14,7 @@ export const loadJobs = jobs => ({ type: JOB_LOAD, payload: jobs });
 export const value = value => ({ type: VALUE, payload: value });
 export const loading = loading => ({ type: JOB_LOADING, payload: loading });
 
+
 export const fetchJobs = () => {
   return dispatch => {
     getJobs()
