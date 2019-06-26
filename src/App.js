@@ -1,5 +1,5 @@
 import React from "react";
-import { Route } from "react-router";
+import { Route, Switch } from "react-router";
 
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
@@ -17,9 +17,11 @@ const App = () => (
         window.location = "/";
       }}
     />
+    <Switch>
     <Route exact path="/" component={JobCard} />
     <Route path="/job/:id" component={Articles} />
     {/* <Route path="/job/:id" component={Recommended} /> */}
+    </Switch>
   </>
 );
 

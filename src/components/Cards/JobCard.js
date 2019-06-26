@@ -29,10 +29,10 @@ class JobCard extends Component {
             />
           </div>
 
-          {/* <SearchResults */}
-          {/* value={this.props.value}
-            data={this.props.jobs}
-            renderResults={results => ( */}
+          {/* <SearchResults 
+       value={this.props.value}
+           data={this.props.jobs}
+           renderResults={results => (  */}
           <div>
             {this.props.jobs.map((job, id) => (
               <div key={id}>
