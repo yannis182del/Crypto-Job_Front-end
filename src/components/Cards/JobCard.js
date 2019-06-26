@@ -2,41 +2,20 @@ import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
 import { Link } from "react-router-dom";
+import { fetchJobs } from "../reducers/job";
+import { connect } from "react-redux";
 
 import "../LocationInput/Input.css";
 import "./JobCard.css";
 
-const url = "https://cryptoapiforpersonal.herokuapp.com/job";
-
 class JobCard extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      data: [],
-      isLoading: true,
-      value: ""
-    };
-  }
-
   componentDidMount() {
-    fetch(url)
-      .then(data => data.json())
-      .then(result =>
-        this.setState({
-          data: result,
-          isLoading: false
-        })
-      );
+    this.props.fetchJobs();
   }
-  handleChange = event => {
-    const { value } = event.target;
-    this.setState({ value });
-  };
 
   render() {
-    if (this.state.isLoading === true) return <LoadingSpinner />;
+    if (this.props.loading === true) return <LoadingSpinner />;
     else {
-      const { data, value } = this.state;
       return (
         <>
           <div className="input-container">
@@ -45,44 +24,44 @@ class JobCard extends Component {
               className="main-input"
               placeholder="Find A Job..."
               type="text"
-              value={this.state.value}
+              value={this.props.value}
               onChange={this.handleChange}
             />
           </div>
 
-          <SearchResults
-            value={value}
-            data={data}
-            renderResults={results => (
-              <div>
-                {results.map((job, id) => (
-                  <div key={id}>
-                    <div key={job._id} className="blog-card">
-                      <div className="meta" />
-                      <div className="description">
-                        <Link
-                          className="link-apply"
-                          to={{
-                            pathname: `/job/${job._id}`,
-                            state: job
-                          }}
-                        >
-                          <h5 className="position-name">{job.position_name}</h5>
-
-                          <p className="place">{job.workplace_name}</p>
-                          <p className="job-desc">{job.location}</p>
-                        </Link>
-                      </div>
-                    </div>
+          {/* <SearchResults */}
+          {/* value={this.props.value}
+            data={this.props.jobs}
+            renderResults={results => ( */}
+          <div>
+            {this.props.jobs.map((job, id) => (
+              <div key={id}>
+                <div key={job._id} className="blog-card">
+                  <div className="meta" />
+                  <div className="description">
+                    <Link
+                      className="link-apply"
+                      to={{
+                        pathname: `/job/${job._id}`,
+                        state: job
+                      }}
+                    >
+                      <h5 className="position-name">{job.position_name}</h5>
+                      <p className="place">{job.workplace_name}</p>
+                      <p className="job-desc">{job.location}</p>
+                    </Link>
                   </div>
-                ))}
+                </div>
               </div>
-            )}
-          />
+            ))}
+          </div>
         </>
       );
     }
   }
 }
 
-export default JobCard;
+export default connect(
+  state => ({ jobs: state.job.jobs, loading: state.job.loading }),
+  { fetchJobs }
+)(JobCard);
