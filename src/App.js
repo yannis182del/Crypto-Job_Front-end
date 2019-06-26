@@ -1,11 +1,8 @@
 import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
 import { Route } from "react-router";
-import ReactDOM from "react-dom";
 
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
-import ScrollToTop from "./components/Scrolling/ScrollToTop";
 import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
 // import Recommended from "./components/Cards/Recommended";
 
@@ -26,11 +23,4 @@ const App = () => (
   </>
 );
 
-ReactDOM.render(
-  <Router>
-    <ScrollToTop>
-      <App />
-    </ScrollToTop>
-  </Router>,
-  document.getElementById("root")
-);
+export default App
