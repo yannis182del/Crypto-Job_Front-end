@@ -18,9 +18,10 @@ const App = () => (
       }}
     />
     <Switch>
-    <Route exact path="/" component={JobCard} />
-    <Route path="/job/:id" component={Articles} />
-    {/* <Route path="/job/:id" component={Recommended} /> */}
+      <Route exact path="/" component={JobCard} />
+      <Route exact path="*" component={JobCard} />
+      <Route path="/job/:id" component={Articles} />
+      {/* <Route path="/job/:id" component={Recommended} /> */}
     </Switch>
   </>
 );
