@@ -1,4 +1,4 @@
-import { getJobs } from "../lib/apiServices";
+import { getJobs } from "../../lib/apiServices";
 
 const initialState = {
   jobs: [],
@@ -11,7 +11,7 @@ const CURRENT_UPDATE = "CURRENT_UPDATE";
 const JOB_LOADING = "JOB_LOADING ";
 
 export const loadJobs = jobs => ({ type: JOB_LOAD, payload: jobs });
-export const updateCurrent = val => ({ type: CURRENT_UPDATE, payload: val });
+export const updateCurrent = value => ({ type: CURRENT_UPDATE, payload: value });
 export const loading = loading => ({ type: JOB_LOADING, payload: loading });
 
 
