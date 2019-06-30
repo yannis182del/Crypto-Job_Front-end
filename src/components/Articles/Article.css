@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
 
 .header-component {
+  font-family: var(--ftFamily);
   display: block;
   background-color: #201d3e;
   margin-left: auto;
@@ -12,53 +13,44 @@
 }
 
 .position-name-article {
-  font-family: var(--ftFamily);
-  font-weight: 700;
+  font-weight: var(--BoldFontWeight);
   margin-left: 10px;
-  color: white;
+  color: var(--txtColorPrimary);
 }
 
 .location {
-  font-family: var(--ftFamily);
   font-weight: 400;
 }
 
 .workplace-name {
-  color: #3eecac;
+  color: var(--textColorSecondary);
   margin-left: 10px;
 }
 
 .location-name {
-  color: #10b7e0;
+  color: var(--textColorBlue);
 }
 
 .contract-type {
   color: #575473;
-  font-family: var(--ftFamily);
   margin-left: 10px;
 }
 
 .about {
-  color: white;
-  font-family: var(--ftFamily);
+  color: var(--txtColorPrimary);
   margin-top: 10%;
   margin-left: 10px;
 }
 
 .about-description {
-  color: white;
-  font-family: var(--ftFamily);
+  color: var(--txtColorPrimary);
   padding: 2px 4px 2px 4px;
   margin-left: 10px;
   line-height: 22px;
 }
 
-@media only screen 
-    and (min-device-width: 375px) 
-    and (min-device-height: 812px) 
-    and (-webkit-device-pixel-ratio: 3)
-    and (orientation: portrait) { 
+@media only screen and (min-device-width: 375px) and (min-device-height: 812px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
   .header-component {
-      height: 600px;
+    height: 600px;
   }
 }

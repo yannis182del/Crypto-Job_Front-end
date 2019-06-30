@@ -12,8 +12,8 @@ export default function Recommended() {
       {data.map(job => {
         if (job.location === "remote") {
           return (
-            <div class="column">
-              <div class="card">
+            <div key={job._id} className="column">
+              <div className="card">
                 <Link
                   className="link-apply"
                   to={{
