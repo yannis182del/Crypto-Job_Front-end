@@ -20,53 +20,53 @@ class JobCard extends Component {
 
   render() {
     const { jobs, value } = this.props;
-    if (this.props.loading === true) return <LoadingSpinner />;
-    else {
-      return (
-        <>
-          <div className="input-container">
-            <span className="fa fa-search" />
-            <input
-              className="main-input"
-              placeholder="Find A Job..."
-              type="text"
-              value={this.props.value}
-              onChange={this.handleInputChange}
-            />
-          </div>
 
-          <SearchResults
-            value={value}
-            data={jobs}
-            renderResults={results => (
-              <div>
-                {results.map((job, id) => (
-                  <div key={id}>
-                    <div key={job._id} className="blog-card">
-                      <div className="meta" />
-                      <div className="description">
-                        <Link
-                          className="link-apply"
-                          to={{
-                            pathname: `/job/${job._id}`,
-                            state: job
-                          }}
-                        >
-                          <h5 className="position-name">{job.position_name}</h5>
-                        </Link>
+    return this.props.loading === true ? (
+      <LoadingSpinner />
+    ) : (
+      <>
+        <div className="input-container">
+          <span className="fa fa-search" />
+          <input
+            className="main-input"
+            placeholder="Find A Job..."
+            type="text"
+            value={this.props.value}
+            onChange={this.handleInputChange}
+          />
+        </div>
 
-                        <p className="place">{job.workplace_name}</p>
-                        <p className="job-desc">{job.location}</p>
-                      </div>
+        <SearchResults
+          value={value}
+          data={jobs}
+          renderResults={results => (
+            <div>
+              {results.map((job, id) => (
+                <div key={id}>
+                  <div key={job._id} className="blog-card">
+                    <div className="meta" />
+                    <div className="description">
+                      <Link
+                        className="link-apply"
+                        to={{
+                          pathname: `/job/${job._id}`,
+                          state: job
+                        }}
+                      >
+                        <h5 className="position-name">{job.position_name}</h5>
+                      </Link>
+
+                      <p className="place">{job.workplace_name}</p>
+                      <p className="job-desc">{job.location}</p>
                     </div>
                   </div>
-                ))}
-              </div>
-            )}
-          />
-        </>
-      );
-    }
+                </div>
+              ))}
+            </div>
+          )}
+        />
+      </>
+    );
   }
 }
 
