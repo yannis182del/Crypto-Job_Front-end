@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import SearchResults from "react-filter-search";
 import { Link } from "react-router-dom";
-import { fetchJobs, updateCurrent } from "../reducers/job";
+import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
 
 import "../LocationInput/Input.css";
@@ -17,7 +17,6 @@ class JobCard extends Component {
     const val = evt.target.value;
     this.props.updateCurrent(val);
   };
-
 
   render() {
     const { jobs, value } = this.props;
