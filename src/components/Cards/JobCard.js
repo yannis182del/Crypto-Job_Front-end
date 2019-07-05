@@ -55,7 +55,6 @@ class JobCard extends Component {
                       >
                         <h5 className="position-name">{job.position_name}</h5>
                       </Link>
-
                       <p className="place">{job.workplace_name}</p>
                       <p className="job-desc">{job.location}</p>
                     </div>
