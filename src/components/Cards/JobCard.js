@@ -30,15 +30,15 @@ class JobCard extends Component {
     });
   };
   render() {
-    const { jobs, value } = this.props;
+    const { jobs, value, loading } = this.props;
 
-    return this.props.loading === true ? (
+    return loading === true ? (
       <LoadingSpinner />
     ) : (
       <>
         {this.state.toggle === true ? (
           <div>
-          <MainInput onClick={this.changeToggle} class="main-input" placeholder="Find A Job..." type="text" value={this.props.value} onChange={this.handleInputChange}/>
+          <MainInput onClick={this.changeToggle} class="main-input" placeholder="Find A Job..." type="text" value={value} onChange={this.handleInputChange}/>
           </div>
         ) : (
           <LookingGlass className="fa fa-search side-glass" onClick={this.changeToggle} />
