@@ -1,7 +1,6 @@
 import React from "react";
 import "./Article.css";
 import GradiendButton from "../Buttons/GradientButton";
-// import Recommended from "../Cards/Recommended";
 
 export default function ArticleComponent(props) {
   return (

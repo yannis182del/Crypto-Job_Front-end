@@ -1,5 +1,5 @@
 import React from "react";
 
-export default function LookingGlass(props) {
+export default function faIcon(props) {
   return <span className={props.className} onClick={props.onClick} />;
 }

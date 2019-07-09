@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
-import LookingGlass from "../../assets/LookingGlass";
+import FaIcon from "../../assets/FaIcon";
 import MainInput from "../Input/Input";
 import SearchResults from "react-filter-search";
 import ToggleJob from "../Toggle/ToggleJob";
@@ -58,24 +58,24 @@ class JobCard extends Component {
             />
           </div>
         ) : (
-          <div>
+          <>
             <ToggleJob
               handleClick={this.handleClick}
               isToggleOn={this.state.toggleJob}
               className="toggle-button"
             />
-            <LookingGlass
+            <FaIcon
               className="fa fa-search side-glass"
               onClick={this.handleToggle}
             />
-          </div>
+          </>
         )}
 
         <SearchResults
           value={value}
           data={jobs}
           renderResults={results => (
-            <div>
+            <>
               {results.map((job, id) => (
                 <div
                   className={
@@ -86,7 +86,6 @@ class JobCard extends Component {
                   key={id}
                 >
                   <div key={job._id} className="blog-card">
-                    <div className="meta" />
                     <div className="description">
                       <Link
                         className="link-apply"
@@ -96,14 +95,14 @@ class JobCard extends Component {
                         }}
                       >
                         <h5 className="position-name">{job.position_name}</h5>
+                        <p className="place">{job.workplace_name}</p>
+                        <p className="location-job">{job.location}</p>
                       </Link>
-                      <p className="place">{job.workplace_name}</p>
-                      <p className="location-job">{job.location}</p>
                     </div>
                   </div>
                 </div>
               ))}
-            </div>
+            </>
           )}
         />
       </>

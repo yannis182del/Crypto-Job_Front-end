@@ -5,7 +5,6 @@ import { Route, Switch } from "react-router";
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
 import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
-// import Recommended from "./components/Cards/Recommended";
 
 import "./index.css";
 
