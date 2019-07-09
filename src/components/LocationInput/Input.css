@@ -10,14 +10,14 @@
   position: relative;
 }
 
-.toggle-button{
- display:inline-block;
- justify-content: center;
- margin: 10px 60px 10px 80px;
- padding: 0px
-  }
+.toggle-button {
+  display: inline-block;
+  justify-content: center;
+  margin: 10px 60px 10px 20px;
+  padding: 0px;
+}
 
-.input-container .fa-search {
+.input-container .input-glass {
   position: absolute;
   top: 20%;
   left: 8%;
@@ -31,16 +31,15 @@
   -webkit-text-fill-color: transparent;
 }
 
-
 .side-glass {
   display: inline-block;
   animation-name: going;
   animation-duration: 0.4s;
   justify-content: flex-end;
   margin-right: 20px;
-  margin-left: 50px;
+  margin-left: 96px;
   margin-bottom: 20px;
-  font-size: 25px;
+  font-size: 35px;
   background: radial-gradient(
     12.5px at 35.45% 40.02%,
     var(--textColorSecondary) 0%,
@@ -49,7 +48,6 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 .main-input {
   animation-name: going;
@@ -90,7 +88,7 @@
   font-family: var(--ftFamily);
 }
 
-.bar-menue {
+.bar-menue  {
   display: inline-block;
 }
 

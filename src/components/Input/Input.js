@@ -5,7 +5,9 @@ import LookingGlass from "../assets/LookingGlass";
 const MainInput = props => {
   return (
     <div className="input-container">
-      <LookingGlass className="fa fa-search" onClick={props.onClick} />
+  
+
+      <LookingGlass className="fa fa-search input-glass" onClick={props.onClick} />
       <input
         className={props.class}
         placeholder={props.placeholder}

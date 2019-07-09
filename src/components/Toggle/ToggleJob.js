@@ -2,16 +2,8 @@ import React from "react";
 import "./toggle.scss";
 
 class Muchrender extends React.Component {
-  //state = { isToggleOn: true };
-  // move the state to redux
-  // handleClick = () => {
-  //   this.setState({
-  //     isToggleOn: !this.state.isToggleOn
-  //   });
-  // };
 
   render() {
-    console.log("props", this.props);
     return (
       <div className={this.props.className}>
         <div className="button-wrapper">

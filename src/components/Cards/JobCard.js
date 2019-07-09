@@ -6,7 +6,6 @@ import SearchResults from "react-filter-search";
 import { Link } from "react-router-dom";
 import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
-import Footer from "../Footer/Footer";
 import Muchrender from "../Toggle/ToggleJob";
 import "../LocationInput/Input.css";
 import "./JobCard.css";
@@ -62,10 +61,10 @@ class JobCard extends Component {
               isToggleOn={this.state.toggleJob}
               className="toggle-button"
             />
-            <LookingGlass
-              className="fa fa-search side-glass"
-              onClick={this.changeToggle}
-            />
+              <LookingGlass
+                className="fa fa-search side-glass"
+                onClick={this.changeToggle}
+              />
           </div>
         )}
 
@@ -104,7 +103,6 @@ class JobCard extends Component {
             </div>
           )}
         />
-        <Footer />
       </>
     );
   }
