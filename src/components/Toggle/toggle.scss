@@ -1,0 +1,77 @@
+$green: #3eecac;
+$blue: #10b7e0;
+
+@mixin button($color) {
+  border-top: 2px solid lighten($color, 5%);
+  border-left: 2px solid darken($color, 0%);
+  background-color: $color;
+  background-image: linear-gradient(
+    to right,
+    $color,
+    lighten($color, 8%),
+    $color
+  );
+  text-shadow: -1px 0 0 rgba(0, 0, 0, 0.5);
+
+  &:hover {
+    border-top: 2px solid lighten($color, 10%);
+    border-right: 2px solid lighten($color, 15%);
+    border-left: 2px solid darken($color, 5%);
+    background-color: lighten($color, 5%);
+    background-image: linear-gradient(
+      to right,
+      lighten($color, 5%),
+      lighten($color, 12%),
+      lighten($color, 5%)
+    );
+  }
+}
+
+.green {
+  @include button($green);
+}
+
+.red {
+  left: 80px;
+
+  @include button($blue);
+}
+
+.button-wrapper {
+  margin: 10px 0;
+  position: relative;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  left: 0;
+  padding: 10px 0;
+  position: relative;
+  border-radius: 10px;
+  color: #201D3E;
+  font-family: "Roboto", sans-serif;
+  text-align: center;
+  font-size: 18px;
+  width: 134.61px;
+  height: 44px;
+  transition: all 350ms ease-out;
+  box-shadow: -1px 1px 3px #555;
+  user-select: none;
+  border-radius: 21px;
+}
+
+button:focus {
+    outline: none;
+}
+
+.slider {
+  position: absolute;
+  width: 210px;
+  height: 45px;
+  background-color: var(--bgPrimary);
+  margin: auto;
+  top: 0;
+  border-radius: 28.5px;
+}

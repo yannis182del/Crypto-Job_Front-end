@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
 import LookingGlass from "../assets/LookingGlass";
-import MainInput from "../Input/Input"
+import MainInput from "../Input/Input";
 import SearchResults from "react-filter-search";
 import { Link } from "react-router-dom";
 import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
-
+import Footer from "../Footer/Footer";
+import Muchrender from "../Toggle/ToggleJob";
 import "../LocationInput/Input.css";
 import "./JobCard.css";
 
@@ -37,11 +38,24 @@ class JobCard extends Component {
     ) : (
       <>
         {this.state.toggle === true ? (
-          <div>
-          <MainInput onClick={this.changeToggle} class="main-input" placeholder="Find A Job..." type="text" value={value} onChange={this.handleInputChange}/>
+          <div className="toggle-jobs">
+            <MainInput
+              onClick={this.changeToggle}
+              class="main-input"
+              placeholder="Find A Job..."
+              type="text"
+              value={value}
+              onChange={this.handleInputChange}
+            />
           </div>
         ) : (
-          <LookingGlass className="fa fa-search side-glass" onClick={this.changeToggle} />
+          <div className="bar-menue">
+            <Muchrender className="toggle-button" />
+            <LookingGlass
+              className="fa fa-search side-glass"
+              onClick={this.changeToggle}
+            />
+          </div>
         )}
 
         <SearchResults
@@ -72,6 +86,7 @@ class JobCard extends Component {
             </div>
           )}
         />
+        <Footer />
       </>
     );
   }

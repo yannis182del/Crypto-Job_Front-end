@@ -22,9 +22,9 @@ const App = () => (
       <Route exact path="/" component={JobCard} />
       <Route path="/job/:id" component={Articles} />
       <Route exact path="*" component={JobCard} />
-      {/* <Route path="/job/:id" component={Recommended} /> */}
     </Switch>
+
   </>
-);
+)
 
 export default App

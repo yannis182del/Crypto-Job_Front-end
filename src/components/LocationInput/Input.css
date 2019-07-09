@@ -10,6 +10,13 @@
   position: relative;
 }
 
+.toggle-button{
+ display:inline-block;
+ justify-content: center;
+ margin: 10px 60px 10px 80px;
+ padding: 0px
+  }
+
 .input-container .fa-search {
   position: absolute;
   top: 20%;
@@ -24,12 +31,15 @@
   -webkit-text-fill-color: transparent;
 }
 
+
 .side-glass {
-  display: flex;
+  display: inline-block;
+  animation-name: going;
+  animation-duration: 0.4s;
   justify-content: flex-end;
   margin-right: 20px;
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-left: 50px;
+  margin-bottom: 20px;
   font-size: 25px;
   background: radial-gradient(
     12.5px at 35.45% 40.02%,
@@ -40,9 +50,12 @@
   -webkit-text-fill-color: transparent;
 }
 
+
 .main-input {
+  animation-name: going;
+  animation-duration: 0.8s;
   padding: 20px 10px 10px 15px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   border-top-width: 5px;
   border-radius: 28.5px;
   border: none;
@@ -62,7 +75,6 @@
 .search input {
   text-indent: 32px;
 }
-
 
 .display-none {
   display: none;
@@ -111,5 +123,15 @@ input:focus {
 @media (max-width: 2000px) {
   .main-input {
     width: 85%;
+  }
+}
+
+@keyframes going {
+  from {
+    transform: translateX(200px);
+  }
+  to {
+    transform: translateX(0);
+    opacity: 0.6;
   }
 }
