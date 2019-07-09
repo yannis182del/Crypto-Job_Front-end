@@ -1,5 +1,6 @@
 import React from "react";
-import LookingGlass from "../assets/LookingGlass";
+import LookingGlass from "../../assets/LookingGlass";
+import "./Input.css";
 
 
 const MainInput = props => {

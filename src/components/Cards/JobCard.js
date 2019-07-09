@@ -1,13 +1,16 @@
 import React, { Component } from "react";
+
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
-import LookingGlass from "../assets/LookingGlass";
+import LookingGlass from "../../assets/LookingGlass";
 import MainInput from "../Input/Input";
 import SearchResults from "react-filter-search";
+import ToggleJob from "../Toggle/ToggleJob";
+
 import { Link } from "react-router-dom";
+
 import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
-import Muchrender from "../Toggle/ToggleJob";
-import "../LocationInput/Input.css";
+
 import "./JobCard.css";
 
 class JobCard extends Component {
@@ -25,7 +28,7 @@ class JobCard extends Component {
     this.props.updateCurrent(val);
   };
 
-  changeToggle = () => {
+  handleToggle = () => {
     this.setState({
       toggle: !this.state.toggle
     });
@@ -46,7 +49,7 @@ class JobCard extends Component {
         {this.state.toggle === true ? (
           <div className="toggle-jobs">
             <MainInput
-              onClick={this.changeToggle}
+              onClick={this.handleToggle}
               class="main-input"
               placeholder="Find A Job..."
               type="text"
@@ -55,16 +58,16 @@ class JobCard extends Component {
             />
           </div>
         ) : (
-          <div className="bar-menue">
-            <Muchrender
+          <div>
+            <ToggleJob
               handleClick={this.handleClick}
               isToggleOn={this.state.toggleJob}
               className="toggle-button"
             />
-              <LookingGlass
-                className="fa fa-search side-glass"
-                onClick={this.changeToggle}
-              />
+            <LookingGlass
+              className="fa fa-search side-glass"
+              onClick={this.handleToggle}
+            />
           </div>
         )}
 
@@ -95,7 +98,7 @@ class JobCard extends Component {
                         <h5 className="position-name">{job.position_name}</h5>
                       </Link>
                       <p className="place">{job.workplace_name}</p>
-                      <p className="job-desc">{job.location}</p>
+                      <p className="location-job">{job.location}</p>
                     </div>
                   </div>
                 </div>

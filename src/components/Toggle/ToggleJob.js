@@ -1,8 +1,7 @@
 import React from "react";
 import "./toggle.scss";
 
-class Muchrender extends React.Component {
-
+class ToggleJob extends React.Component {
   render() {
     return (
       <div className={this.props.className}>
@@ -20,5 +19,4 @@ class Muchrender extends React.Component {
   }
 }
 
-
-export default Muchrender;
+export default ToggleJob;

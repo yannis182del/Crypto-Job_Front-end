@@ -1,3 +1,7 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap");
+@import url("//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css");
+
+
 :root {
   --ftFamily: "Roboto", sans-serif;
   --bgPrimary: #201d3e;
@@ -26,8 +30,4 @@ body {
   margin: 10px auto;
   padding: 1rem;
   text-align: center;
-}
-
-.hidden {
-  display: none;
 }

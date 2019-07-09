@@ -4,7 +4,6 @@ $blue: #10b7e0;
 @mixin button($color) {
   border-top: 2px solid lighten($color, 5%);
   border-left: 2px solid darken($color, 0%);
-  background-color: $color;
   background-image: linear-gradient(
     to right,
     $color,
@@ -49,10 +48,10 @@ button {
   padding: 10px 0;
   position: relative;
   border-radius: 10px;
-  color: #201d3e;
-  font-family: "Roboto", sans-serif;
+  color: var(--bgPrimary);
+  font-family: var(--ftFamily);
   text-align: center;
-  font-size: 18px;
+  font-size: var(--PrimaryFontSize);
   width: 134.61px;
   height: 44px;
   transition: all 350ms ease-out;
@@ -73,4 +72,15 @@ button:focus {
   margin: auto;
   top: 0;
   border-radius: 28.5px;
+}
+
+.toggle-button {
+  display: inline-block;
+  justify-content: center;
+  margin: 10px 60px 10px 20px;
+  padding: 0px;
+}
+
+.hidden {
+  display: none;
 }
