@@ -90,6 +90,10 @@
   font-family: var(--ftFamily);
 }
 
+.bar-menue {
+  display: inline-block;
+}
+
 .text_input-top {
   font-weight: 200;
   font-family: Arial, Helvetica, sans-serif;
