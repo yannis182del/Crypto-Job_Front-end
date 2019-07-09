@@ -13,7 +13,8 @@ import "./JobCard.css";
 
 class JobCard extends Component {
   state = {
-    toggle: false
+    toggle: false,
+    toggleJob: false
   };
 
   componentDidMount() {
@@ -30,9 +31,15 @@ class JobCard extends Component {
       toggle: !this.state.toggle
     });
   };
+
+  handleClick = () => {
+    this.setState({
+      toggleJob: !this.state.toggleJob
+    });
+  };
+
   render() {
     const { jobs, value, loading } = this.props;
-
     return loading === true ? (
       <LoadingSpinner />
     ) : (
@@ -50,7 +57,11 @@ class JobCard extends Component {
           </div>
         ) : (
           <div className="bar-menue">
-            <Muchrender className="toggle-button" />
+            <Muchrender
+              handleClick={this.handleClick}
+              isToggleOn={this.state.toggleJob}
+              className="toggle-button"
+            />
             <LookingGlass
               className="fa fa-search side-glass"
               onClick={this.changeToggle}
@@ -64,7 +75,14 @@ class JobCard extends Component {
           renderResults={results => (
             <div>
               {results.map((job, id) => (
-                <div key={id}>
+                <div
+                  className={
+                    this.state.toggleJob && job.location !== "remote"
+                      ? "hidden"
+                      : null
+                  }
+                  key={id}
+                >
                   <div key={job._id} className="blog-card">
                     <div className="meta" />
                     <div className="description">

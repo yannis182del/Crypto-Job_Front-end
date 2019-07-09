@@ -27,3 +27,7 @@ body {
   padding: 1rem;
   text-align: center;
 }
+
+.hidden {
+  display: none;
+}
