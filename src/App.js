@@ -4,7 +4,7 @@ import { Route, Switch } from "react-router";
 
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
-import { ReactComponent as Logo } from "../../my-app/src/Images/logo.svg";
+import { ReactComponent as Logo } from "./assets/Images/logo.svg";
 
 import "./index.css";
 
@@ -22,7 +22,6 @@ const App = () => (
       <Route path="/job/:id" component={Articles} />
       <Route exact path="*" component={JobCard} />
     </Switch>
-
   </>
 )
 

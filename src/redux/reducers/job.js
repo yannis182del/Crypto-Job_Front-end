@@ -3,7 +3,7 @@ import { getJobs } from "../../lib/apiServices";
 const initialState = {
   jobs: [],
   value: "",
-  loading: true
+  loading: true,
 };
 
 const JOB_LOAD = " JOB_LOAD";

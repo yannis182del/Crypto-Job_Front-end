@@ -25,12 +25,12 @@
 .side-glass {
   display: inline-block;
   animation-name: going;
-  animation-duration: 0.4s;
+  animation-duration: 0.2s;
   justify-content: flex-end;
   margin-right: 20px;
   margin-left: 96px;
   padding: auto;
-  font-size: 40px;
+  font-size: 30px;
   background: radial-gradient(
     12.5px at 35.45% 40.02%,
     var(--textColorSecondary) 0%,
@@ -70,7 +70,7 @@
   display: inline-block;
   height: 50px;
   border: 0px;
-  color: rgb(159, 165, 170);
+  color: #575473;
   font-size: 1rem;
   font-family: var(--ftFamily);
 }
@@ -106,10 +106,10 @@ input:focus {
 
 @keyframes going {
   from {
-    transform: translateX(200px);
+    transform: translateX(90px);
   }
   to {
     transform: translateX(0);
-    opacity: 0.6;
+    opacity: 0.8;
   }
 }

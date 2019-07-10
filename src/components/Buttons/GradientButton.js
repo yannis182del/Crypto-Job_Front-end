@@ -13,7 +13,9 @@ const MyButton = styled(Button)({
   width: "70%",
   marginTop: "5%",
   marginLeft: "15%",
-  marginRight: "15%"
+  marginRight: "15%",
+  fontFamily: "Roboto",
+  fontSize: "20px"
 });
 
 export default function GradiendButton(props) {

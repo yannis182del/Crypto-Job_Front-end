@@ -4,8 +4,8 @@ import GradiendButton from "../Buttons/GradientButton";
 
 export default function ArticleComponent(props) {
   return (
-    <div>
-      <div className="header-component">
+    <>
+      <div className="article-component">
         <h4 className="position-name-article">{props.position_name}</h4>
         <p className="location">
           <span className="workplace-name">{props.workplace_name}</span>{" "}
@@ -19,6 +19,6 @@ export default function ArticleComponent(props) {
         </div>
       </div>
       <GradiendButton link={props.link} />
-    </div>
+    </>
   );
 }

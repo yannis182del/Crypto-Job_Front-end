@@ -16,7 +16,6 @@ import "./JobCard.css";
 class JobCard extends Component {
   state = {
     toggle: false,
-    toggleJob: false
   };
 
   componentDidMount() {
@@ -70,7 +69,6 @@ class JobCard extends Component {
             />
           </>
         )}
-
         <SearchResults
           value={value}
           data={jobs}
@@ -114,7 +112,7 @@ export default connect(
   state => ({
     jobs: state.job.jobs,
     loading: state.job.loading,
-    value: state.job.value
+    value: state.job.value,
   }),
   { fetchJobs, updateCurrent }
 )(JobCard);
