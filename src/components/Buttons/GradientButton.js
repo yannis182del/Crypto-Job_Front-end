@@ -21,9 +21,7 @@ const MyButton = styled(Button)({
 export default function GradiendButton(props) {
   return(
       <div>
-          
-          <MyButton onClick={() => { window.location = props.link}} >Apply</MyButton>
-         
+          <MyButton onClick={() => { window.location = props.link}} >Apply</MyButton>       
       </div>
   )
 }
