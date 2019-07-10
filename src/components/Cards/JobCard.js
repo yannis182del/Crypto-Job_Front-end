@@ -41,11 +41,12 @@ class JobCard extends Component {
 
   render() {
     const { jobs, value, loading } = this.props;
+    const {toggle, toggleJob } = this.state
     return loading === true ? (
       <LoadingSpinner />
     ) : (
       <>
-        {this.state.toggle === true ? (
+        {toggle === true ? (
           <div className="toggle-jobs">
             <MainInput
               onClick={this.handleToggle}
@@ -60,7 +61,7 @@ class JobCard extends Component {
           <>
             <ToggleJob
               handleClick={this.handleClick}
-              isToggleOn={this.state.toggleJob}
+              isToggleOn={toggleJob}
               className="toggle-button"
             />
             <FaIcon
@@ -77,7 +78,7 @@ class JobCard extends Component {
               {results.map((job, id) => (
                 <div
                   className={
-                    this.state.toggleJob && job.location !== "remote"
+                    toggleJob && job.location !== "remote"
                       ? "hidden"
                       : null
                   }
