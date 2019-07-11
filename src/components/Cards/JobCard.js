@@ -18,7 +18,7 @@ class JobCard extends Component {
     toggle: false,
   };
 
-  componentDidMount() {
+  componentWillMount() {
     this.props.fetchJobs();
   }
 

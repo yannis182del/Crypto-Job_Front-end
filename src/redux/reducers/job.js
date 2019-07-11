@@ -1,5 +1,6 @@
 import { getJobs } from "../../lib/apiServices";
 
+
 const initialState = {
   jobs: [],
   value: "",
@@ -24,6 +25,9 @@ export const fetchJobs = () => {
       .then(load => dispatch(loading(load)));
   };
 };
+
+
+
 
 export default (state = initialState, action) => {
   switch (action.type) {
