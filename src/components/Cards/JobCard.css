@@ -29,6 +29,7 @@
 
 .location-job {
   color: var(--textColorBlue);
+  font-size: 20px;
 }
 
 .link-apply {
