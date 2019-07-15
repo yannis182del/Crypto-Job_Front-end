@@ -17,22 +17,19 @@ const Articles = () => {
   const [job, setJob] = useState(null);
   useEffect(() => {
     query(getJobId(), setJob);
-  } ,[]);
+  }, []);
 
   return <>{
-      job
+    job
       ? <ArticleComponent
         position_name={job.position_name}
         workplace_name={job.workplace_name}
+        location={job.location}
+        contract_type={job.contract_type}
+        description={job.description}
       />
       : <span>loading...</span>
-     }</>
+  }</>
 };
 
 export default Articles
-
-
-
-
-
-
