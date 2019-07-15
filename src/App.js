@@ -19,7 +19,7 @@ const App = () => (
     />
     <Switch>
       <Route exact path="/" component={JobCard} />
-      <Route path="/job/:id" component={Articles} />
+      <Route path="/:id" component={Articles} />
       <Route exact path="*" component={JobCard} />
     </Switch>
   </>
