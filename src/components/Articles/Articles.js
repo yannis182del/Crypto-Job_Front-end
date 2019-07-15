@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import ArticleComponent from "./ArticleComponent";
+import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
+
 
 
 const query = async (id, onFetchData) => {
@@ -28,7 +30,7 @@ const Articles = () => {
         contract_type={job.contract_type}
         description={job.description}
       />
-      : <span>loading...</span>
+      : <LoadingSpinner />
   }</>
 };
 
