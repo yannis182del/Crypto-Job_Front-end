@@ -41,71 +41,71 @@ class JobCard extends Component {
 
   render() {
     const { jobs, value, loading } = this.props;
-    const {toggle, toggleJob } = this.state
+    const { toggle, toggleJob } = this.state
     return loading === true ? (
       <LoadingSpinner />
     ) : (
-      <>
-        {toggle === true ? (
-          <div className="toggle-jobs">
-            <MainInput
-              onClick={this.handleToggle}
-              class="main-input"
-              placeholder="Find A Job..."
-              type="text"
-              value={value}
-              onChange={this.handleInputChange}
-            />
-          </div>
-        ) : (
-          <>
-            <ToggleJob
-              handleClick={this.handleClick}
-              isToggleOn={toggleJob}
-              className="toggle-button"
-            />
-            <FaIcon
-              className="fa fa-search side-glass"
-              onClick={this.handleToggle}
-            />
-          </>
-        )}
-        <SearchResults
-          value={value}
-          data={jobs}
-          renderResults={results => (
-            <>
-              {results.map((job, id) => (
-                <div
-                  className={
-                    toggleJob && job.location !== "remote"
-                      ? "hidden"
-                      : null
-                  }
-                  key={id}
-                >
-                  <div key={job._id} className="blog-card">
-                    <div className="description">
-                      <Link
-                        className="link-apply"
-                        to={{
-                          pathname: `/job/${job._id}`,
-                          state: job
-                        }}
-                      >
-                        <h5 className="position-name">{job.position_name}</h5>
-                        <p className="place">{job.workplace_name}</p>
-                        <p className="location-job">{job.location}</p>
-                      </Link>
+        <>
+          {toggle === true ? (
+            <div className="toggle-jobs">
+              <MainInput
+                onClick={this.handleToggle}
+                class="main-input"
+                placeholder="Find A Job..."
+                type="text"
+                value={value}
+                onChange={this.handleInputChange}
+              />
+            </div>
+          ) : (
+              <>
+                <ToggleJob
+                  handleClick={this.handleClick}
+                  isToggleOn={toggleJob}
+                  className="toggle-button"
+                />
+                <FaIcon
+                  className="fa fa-search side-glass"
+                  onClick={this.handleToggle}
+                />
+              </>
+            )}
+          <SearchResults
+            value={value}
+            data={jobs}
+            renderResults={results => (
+              <>
+                {results.map((job, id) => (
+                  <div
+                    className={
+                      toggleJob && job.location !== "remote"
+                        ? "hidden"
+                        : null
+                    }
+                    key={id}
+                  >
+                    <div key={job._id} className="blog-card">
+                      <div className="description">
+                        <Link
+                          className="link-apply"
+                          to={{
+                            pathname: `/job/${job._id}`,
+                            state: job
+                          }}
+                        >
+                          <h5 className="position-name">{job.position_name}</h5>
+                          <p className="place">{job.workplace_name}</p>
+                          <p className="location-job">{job.location}</p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-              ))}
-            </>
-          )}
-        />
-      </>
-    );
+                ))}
+              </>
+            )}
+          />
+        </>
+      );
   }
 }
 

@@ -1,6 +1,9 @@
 $green: #3eecac;
 $blue: #10b7e0;
 
+$break-large: 600px;
+
+
 @mixin button($color) {
   border-top: 2px solid lighten($color, 5%);
   border-left: 2px solid darken($color, 0%);
@@ -72,13 +75,22 @@ button:focus {
   margin: auto;
   top: 0;
   border-radius: 28.5px;
+  @media only screen and (min-device-width: $break-large)  {     
+    width: 280px;  
+    }
 }
+
+
 
 .toggle-button {
   display: inline-block;
   justify-content: center;
   margin: 10px 60px 10px 20px;
   padding: 0px;
+        
+  @media only screen and (min-device-width: $break-large)  {     
+   margin: 10px 60px 10px 190px      
+            }
 }
 
 .hidden {

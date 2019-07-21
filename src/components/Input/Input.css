@@ -8,6 +8,7 @@
   position: relative;
 }
 
+
 .input-container .input-glass {
   position: absolute;
   top: 20%;
@@ -17,48 +18,48 @@
     12.5px at 35.45% 40.02%,
     var(--textColorSecondary) 0%,
     #08aeea 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.side-glass {
-  display: inline-block;
-  animation-name: going;
-  animation-duration: 0.2s;
-  justify-content: flex-end;
-  margin-right: 20px;
-  margin-left: 96px;
-  padding: auto;
-  font-size: 30px;
-  background: radial-gradient(
-    12.5px at 35.45% 40.02%,
-    var(--textColorSecondary) 0%,
-    #08aeea 100%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.main-input {
-  animation-name: going;
-  animation-duration: 0.8s;
-  padding: 20px 10px 10px 15px;
-  margin-bottom: 10px;
-  border-top-width: 5px;
-  border-radius: 28.5px;
-  border: none;
-  width: 40%;
-  font-family: "Roboto", sans-serif;
-  font-size: 1rem;
-  color: var(--txtColorPrimary);
-  background: #201d3e;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 23px;
-  letter-spacing: -0.02em;
-  text-align: center;
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .side-glass {
+    display: inline-block;
+    animation-name: going;
+    animation-duration: 0.2s;
+    justify-content: flex-end;
+    margin-right: 20px;
+    margin-left: 96px;
+    padding: auto;
+    font-size: 30px;
+    background: radial-gradient(
+      12.5px at 35.45% 40.02%,
+      var(--textColorSecondary) 0%,
+      #08aeea 100%
+      );
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    
+    .main-input {
+      animation-name: going;
+      animation-duration: 0.8s;
+      padding: 20px 10px 10px 15px;
+      margin-bottom: 10px;
+      border-top-width: 5px;
+      border-radius: 28.5px;
+      border: none;
+      width: 40%;
+      font-family: "Roboto", sans-serif;
+      font-size: 1rem;
+      color: var(--txtColorPrimary);
+      background: #201d3e;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 23px;
+      letter-spacing: -0.02em;
+      text-align: center;
 }
 
 .search input {
@@ -98,7 +99,19 @@ input:focus {
   outline: none;
 }
 
-@media (max-width: 2000px) {
+@media only screen and (min-device-width: 600px)  {
+  .main-input  {
+    width: 50%;
+  }
+  .input-container .input-glass {
+    position: absolute;
+    top: 20%;
+    left: 26%;
+      }
+    }
+
+
+@media (max-width: 600px) {
   .main-input {
     width: 85%;
   }

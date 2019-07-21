@@ -34,3 +34,10 @@
 .link-apply {
   text-decoration: none;
 }
+
+@media only screen and (min-device-width: 600px)  {
+.blog-card {
+  width: 614px;
+ margin: 15px auto 10px auto;
+}
+  }
