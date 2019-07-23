@@ -22,52 +22,53 @@ class JobCard extends Component {
     this.props.fetchJobs();
   }
 
-  handleInputChange = evt => {
-    const val = evt.target.value;
-    this.props.updateCurrent(val);
-  };
-
-  handleToggle = () => {
-    this.setState({
-      toggle: !this.state.toggle
-    });
-  };
-
-  handleClick = () => {
-    this.setState({
-      toggleJob: !this.state.toggleJob
-    });
-  };
-
   render() {
-    const { jobs, value, loading } = this.props;
+    const { jobs, value, loading, updateCurrent } = this.props;
     const { toggle, toggleJob } = this.state
+
+    const handleInputChange = evt => {
+      const val = evt.target.value;
+      updateCurrent(val);
+    };
+
+    const handleClick = () => {
+      this.setState({
+        toggleJob: !this.state.toggleJob
+      });
+    };
+
+    const handleToggle = () => {
+      this.setState({
+        toggle: !this.state.toggle
+      });
+    };
+
     return loading === true ? (
       <LoadingSpinner />
     ) : (
-      <>
-        <div className="jobCard">
+        <>
+
           {toggle === true ? (
             <div className="toggle-jobs">
               <MainInput
-                onClick={this.handleToggle}
+                onClick={handleToggle}
                 class="main-input"
                 placeholder="Find A Job..."
                 type="text"
                 value={value}
-                onChange={this.handleInputChange}
+                onChange={handleInputChange}
               />
             </div>
           ) : (
               <>
                 <ToggleJob
-                  handleClick={this.handleClick}
+                  handleClick={handleClick}
                   isToggleOn={toggleJob}
                   className="toggle-button"
                 />
                 <FaIcon
                   className="fa fa-search side-glass"
-                  onClick={this.handleToggle}
+                  onClick={handleToggle}
                 />
               </>
             )}
@@ -104,10 +105,8 @@ class JobCard extends Component {
                 ))}
               </>
             )}
-            />
-        </div>
-            <h2>Hello</h2>
-            </>
+          />
+        </>
       );
   }
 }

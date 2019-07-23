@@ -1,18 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import ArticleComponent from "./ArticleComponent";
 import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
+import config from "../../config/config"
+import {getJobId} from "../../helper/helper"
 
-
+const url = config.API;
 
 const query = async (id, onFetchData) => {
-  const res = await fetch(`https://cryptoapiforpersonal.herokuapp.com/job/${id}`);
+  const res = await fetch(`${url}${id}`);
   const data = await res.json();
   onFetchData(data);
-}
-
-const getJobId = () => {
-  const pathname = window.location.pathname.split('/');
-  return pathname[pathname.length - 1];
 }
 
 const Articles = () => {
@@ -21,7 +18,7 @@ const Articles = () => {
     query(getJobId(), setJob);
   }, []);
 
-  return <>{
+  return (
     job
       ? <ArticleComponent
         position_name={job.position_name}
@@ -31,7 +28,7 @@ const Articles = () => {
         description={job.description}
       />
       : <LoadingSpinner />
-  }</>
+  )
 };
 
 export default Articles
