@@ -106,15 +106,19 @@ input:focus {
   .input-container .input-glass {
     position: absolute;
     top: 20%;
-    left: 26%;
+    left: 25%;
       }
-    }
+      .side-glass {
+        margin-left: 20%;
+      }
+}
 
 
 @media (max-width: 600px) {
   .main-input {
     width: 85%;
   }
+
 }
 
 @keyframes going {

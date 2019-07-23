@@ -45,7 +45,8 @@ class JobCard extends Component {
     return loading === true ? (
       <LoadingSpinner />
     ) : (
-        <>
+      <>
+        <div className="jobCard">
           {toggle === true ? (
             <div className="toggle-jobs">
               <MainInput
@@ -103,8 +104,10 @@ class JobCard extends Component {
                 ))}
               </>
             )}
-          />
-        </>
+            />
+        </div>
+            <h2>Hello</h2>
+            </>
       );
   }
 }

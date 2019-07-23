@@ -36,6 +36,9 @@ $break-large: 600px;
 .red {
   left: 144px;
   @include button($blue);
+  @media only screen and (min-device-width: $break-large)  {     
+    left: 244px;  
+    }
 }
 
 .button-wrapper {
@@ -76,7 +79,7 @@ button:focus {
   top: 0;
   border-radius: 28.5px;
   @media only screen and (min-device-width: $break-large)  {     
-    width: 280px;  
+    width: 380px;  
     }
 }
 
@@ -89,8 +92,8 @@ button:focus {
   padding: 0px;
         
   @media only screen and (min-device-width: $break-large)  {     
-   margin: 10px 60px 10px 190px      
-            }
+   margin: 10px 60px 10px 30%;     
+     }
 }
 
 .hidden {
