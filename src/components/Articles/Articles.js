@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import ArticleComponent from "./ArticleComponent";
-import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
+import GradiendButton from "../Buttons/GradientButton"
 import config from "../../config/config"
-import {getJobId} from "../../helper/helper"
+import { getJobId } from "../../helper/helper"
 
 const url = config.API;
 
@@ -18,16 +18,22 @@ const Articles = () => {
     query(getJobId(), setJob);
   }, []);
 
+
   return (
     job
-      ? <ArticleComponent
-        position_name={job.position_name}
-        workplace_name={job.workplace_name}
-        location={job.location}
-        contract_type={job.contract_type}
-        description={job.description}
-      />
-      : <LoadingSpinner />
+      ? (
+        <>
+          <ArticleComponent
+            position_name={job.position_name}
+            workplace_name={job.workplace_name}
+            location={job.location}
+            contract_type={job.contract_type}
+            description={job.description}
+          />
+          <GradiendButton link={job.link} />
+        </>
+      )
+      : null
   )
 };
 

@@ -3,7 +3,7 @@
 .article-component {
   font-family: var(--ftFamily);
   display: block;
-  background-color: #201d3e;
+  background-color: var(--bgPrimary);
   margin-left: auto;
   margin-right: auto;
   width: 90%;

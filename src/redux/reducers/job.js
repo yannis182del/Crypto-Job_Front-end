@@ -1,4 +1,4 @@
-import { getJobs } from "../../lib/apiServices";
+import { getJobs} from "../../lib/apiServices";
 
 
 const initialState = {
@@ -7,7 +7,7 @@ const initialState = {
   loading: true,
 };
 
-const JOB_LOAD = " JOB_LOAD";
+const JOB_LOAD = "JOB_LOAD";
 const CURRENT_UPDATE = "CURRENT_UPDATE";
 const JOB_LOADING = "JOB_LOADING ";
 
@@ -26,9 +26,6 @@ export const fetchJobs = () => {
   };
 };
 
-
-
-
 export default (state = initialState, action) => {
   switch (action.type) {
     case JOB_LOADING:
@@ -37,6 +34,7 @@ export default (state = initialState, action) => {
       return { ...state, jobs: action.payload };
     case CURRENT_UPDATE:
       return { ...state, value: action.payload };
+    
     default:
       return state;
   }

@@ -71,6 +71,7 @@ class JobCard extends Component {
             />
           </>
         }
+
         <SearchResults
           value={value}
           data={jobs}
@@ -100,6 +101,7 @@ class JobCard extends Component {
                     </div>
                   </div>
                 </div>
+
               ))}
             </>
           )}

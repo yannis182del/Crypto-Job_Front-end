@@ -1,6 +1,5 @@
 import React from "react";
 import "./Article.css";
-import GradiendButton from "../Buttons/GradientButton";
 
 export default function ArticleComponent(props) {
   return (
@@ -18,7 +17,7 @@ export default function ArticleComponent(props) {
           <h3 className="about">Job Overview</h3>
         </div>
       </div>
-      <GradiendButton link={props.link} />
+      
     </>
   );
 }

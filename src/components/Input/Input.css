@@ -43,14 +43,14 @@
     
     .main-input {
       animation-name: going;
-      animation-duration: 0.8s;
+      animation-duration: 0.3s;
       padding: 20px 10px 10px 15px;
       margin-bottom: 10px;
       border-top-width: 5px;
       border-radius: 28.5px;
       border: none;
       width: 40%;
-      font-family: "Roboto", sans-serif;
+      font-family: var(--ftFamily);
       font-size: 1rem;
       color: var(--txtColorPrimary);
       background: #201d3e;
@@ -101,15 +101,16 @@ input:focus {
 
 @media only screen and (min-device-width: 600px)  {
   .main-input  {
-    width: 50%;
+    width: 30%;
   }
   .input-container .input-glass {
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 35%;
       }
       .side-glass {
-        margin-left: 20%;
+        margin-left:200px;
+        font-size: 40px;
       }
 }
 

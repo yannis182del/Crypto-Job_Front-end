@@ -23,6 +23,58 @@ body {
   background: #16132e;
 }
 
+.nav {
+
+  font-family: var( --ftFamily);
+  font-size: 13px;
+  list-style:none ;
+  margin-right: 50px;
+  margin-top: 30px; 
+}
+
+.ul-el {
+  color: #BCBACE;
+  list-style-type: none; 
+  display: flex;
+}
+
+
+.router-link {
+  text-decoration: none;
+  color: blue;
+  margin-right: 10px;
+  background: var(--bgPrimary);
+  border-radius: 36px;
+  font-size: 14px;
+  font-weight: var(--BoldFontWeight);
+  padding: 10px;
+  color: var(--txtColorPrimary);
+  
+}
+
+@media only screen and (max-device-width: 600px)  {
+  .nav {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 10px;
+  margin-top: 10px; 
+  border-bottom: 1px solid black;
+}
+.router-link {  
+    text-decoration: none;
+    margin-right: 2px;
+    background: none;
+    border-radius: 36px;
+    font-size: 14px;
+    font-weight: 400; 
+    color: #BCBACE;
+  }
+
+  .home {
+    display: none;
+  } 
+    }
+  
 .App-logo {
   display: block;
   width: 210px;
@@ -30,3 +82,11 @@ body {
   padding: 1rem;
   text-align: center;
 }
+
+@media only screen and (min-device-width: 600px)  {
+  .App-logo {
+    width: 300px;
+    padding-bottom: 3rem;
+  }
+    }
+  

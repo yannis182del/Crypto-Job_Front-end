@@ -9,6 +9,8 @@ const override = css`
     border-color: red;
    margin-bottom: 50px;
 `;
+
+const green = '#3eecac'
  
 class LoadingSpinner extends React.Component {
   constructor(props) {
@@ -24,7 +26,7 @@ class LoadingSpinner extends React.Component {
           css={override}
           sizeUnit={"px"}
           size={30}
-          color={' #3eecac;'}
+          color={green}
           loading={this.state.loading}
         />
       </div> 
