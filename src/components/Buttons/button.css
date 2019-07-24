@@ -1,0 +1,25 @@
+   
+   .apply-button{
+       background: linear-gradient(158.36deg, #3EECAC 53.57%, #10B7E0 101.89%);
+       border: 0;
+       border-radius: 21;
+       color: #16132E;
+       height: 48;
+       padding: 0 80px;
+       width: 70%;
+       margin-top: 5%;
+       margin-left: 15%;
+       margin-right: 15%;
+       margin-bottom: 10%;
+       font-family: Roboto;
+       font-size: 20px
+   }
+
+   @media only screen and (min-device-width: 600px)  {
+    .apply-button{
+      width: 30%;
+      margin-left: 35%;
+      margin-bottom: 50px;
+      margin-top: 2%
+      }
+    }

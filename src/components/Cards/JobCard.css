@@ -1,6 +1,3 @@
-
-
-
 .blog-card {
   border: 10px;
   background-color: var(--bgPrimary);
@@ -23,14 +20,13 @@
 
 .text-description {
   color: white;
+  font-size: var(--PrimaryFontSize);
 }
 
 .place {
   color: var(--textColorSecondary);
   font-style: normal;
-  font-weight: 400;
   font-size: var(--PrimaryFontSize);
-  line-height: 21px;
   margin-bottom: 2px;
 }
 
@@ -42,6 +38,9 @@
 .link-apply {
   text-decoration: none;
 }
+
+
+/* Media Queries !!! */
 
 @media only screen and (min-device-width: 600px)  {
 .blog-card {

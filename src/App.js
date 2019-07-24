@@ -28,10 +28,10 @@ function AppRouter() {
             <Link className="router-link home" to="/">Home</Link>
           </li>
           <li >
-            <Link className="router-link left" to="/candidat/">Candidat</Link>
+            <Link className="router-link left" to="/candidat">Candidat</Link>
           </li>
           <li>
-            <Link className="router-link left" to="/recruteur/">Recruteur  <span>?</span></Link>
+            <Link className="router-link left" to="/recruteur">Recruteur  <span>?</span></Link>
           </li>
         </ul>
       </nav>
@@ -55,8 +55,8 @@ const App = () => (
     <Switch>
       <Route exact path="/" component={JobCard} />
       <Route path="/job/:id" component={Articles} />
-      <Route path="/candidat/" component={Candidat} />
-      <Route path="/recruteur/" component={Recruteur} />
+      <Route path="/candidat" component={Candidat} />
+      <Route path="/recruteur" component={Recruteur} />
     </Switch>
   </>
 )
