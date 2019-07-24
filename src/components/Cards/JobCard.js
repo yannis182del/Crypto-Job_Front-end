@@ -95,8 +95,9 @@ class JobCard extends Component {
                         }}
                       >
                         <h5 className="position-name">{job.position_name}</h5>
-                        <p className="place">{job.workplace_name}</p>
+                        <p className="place">{job.workplace_name} <span className="desktop-location">- {job.location}</span> </p> 
                         <p className="location-job">{job.location}</p>
+                        <div className="text-description">{job.description.replace(/^(.{200}[^\s]*).*/, "$1")}...</div>
                       </Link>
                     </div>
                   </div>

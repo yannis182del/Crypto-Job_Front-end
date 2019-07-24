@@ -21,6 +21,10 @@
 
 }
 
+.text-description {
+  color: white;
+}
+
 .place {
   color: var(--textColorSecondary);
   font-style: normal;
@@ -42,7 +46,24 @@
 @media only screen and (min-device-width: 600px)  {
 .blog-card {
   width: 614px;
- margin: 15px auto 10px auto;
+  margin: 15px auto 10px auto;
+}
+.location-job {
+  display: none;
+ }
+ .place {
+   margin-bottom: 10px;
+ }
+ .desktop-location {
+   color: var(--textColorBlue)
+ }
 }
 
+@media only screen and (max-device-width: 600px)  {  
+  .text-description {
+    display: none
   }
+  .desktop-location {
+    display: none;
+  }
+   }
