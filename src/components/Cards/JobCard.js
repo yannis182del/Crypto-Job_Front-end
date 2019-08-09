@@ -7,7 +7,7 @@ import SearchResults from "react-filter-search";
 import ToggleJob from "../Toggle/ToggleJob";
 
 import { Link } from "react-router-dom";
-
+import {regexChange} from "../../helper/helper"
 import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
 
@@ -97,7 +97,7 @@ class JobCard extends Component {
                         <h5 className="position-name">{job.position_name}</h5>
                         <p className="place">{job.workplace_name} <span className="desktop-location">- {job.location}</span> </p> 
                         <p className="location-job">{job.location}</p>
-                        <div className="text-description">{job.description.replace(/^(.{200}[^\s]*).*/, "$1")}...</div>
+                        <div className="text-description">{regexChange(job.description)}...</div>
                       </Link>
                     </div>
                   </div>

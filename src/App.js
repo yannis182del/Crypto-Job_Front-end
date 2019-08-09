@@ -11,11 +11,22 @@ import "./index.css";
 
 
 function Candidat() {
-  return <h2>Candidat</h2>;
+  return (
+    <div className="candidat-form">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+
+      </div>
+  )
 }
 
 function Recruteur() {
-  return <h2>Recruteur</h2>;
+  return (
+    <div className="candidat-form">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+
+    </div>
+  )
 }
 
 
@@ -31,7 +42,7 @@ function AppRouter() {
             <Link className="router-link left" to="/candidat">Candidat</Link>
           </li>
           <li>
-            <Link className="router-link left" to="/recruteur">Recruteur  <span>?</span></Link>
+            <Link className="router-link left" to="/recruteur">Recruteur<span>?</span></Link>
           </li>
         </ul>
       </nav>

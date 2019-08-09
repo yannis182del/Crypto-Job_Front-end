@@ -4,10 +4,11 @@ import GradiendButton from "../Buttons/GradientButton"
 import config from "../../config/config"
 import { getJobId } from "../../helper/helper"
 
-const url = config.API;
+const url = config.MOCk_API;
 
 const query = async (id, onFetchData) => {
   const res = await fetch(`${url}${id}`);
+  console.log(res)
   const data = await res.json();
   onFetchData(data);
 }

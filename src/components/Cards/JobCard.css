@@ -1,4 +1,5 @@
 .blog-card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4);
   border: 10px;
   background-color: var(--bgPrimary);
   border-radius: 12px;
