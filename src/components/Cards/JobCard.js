@@ -7,7 +7,7 @@ import SearchResults from "react-filter-search";
 import ToggleJob from "../Toggle/ToggleJob";
 
 import { Link } from "react-router-dom";
-import {regexChange} from "../../helper/helper"
+import { regexChange } from "../../helper/helper"
 import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
 import { connect } from "react-redux";
 
@@ -76,35 +76,36 @@ class JobCard extends Component {
           value={value}
           data={jobs}
           renderResults={results => (
-            <>
+            <div className="card-container">
               {results.map((job, id) => (
+        
                 <div
-                  className={
-                    toggleJob && job.location !== "remote"
-                      ? "hidden"
-                      : null
-                  }
-                  key={id}
-                >
-                  <div key={job._id} className="blog-card">
-                    <div className="description">
-                      <Link
-                        className="link-apply"
-                        to={{
-                          pathname: `/job/${job._id}`,
-                        }}
-                      >
-                        <h5 className="position-name">{job.position_name}</h5>
-                        <p className="place">{job.workplace_name} <span className="desktop-location">- {job.location}</span> </p> 
-                        <p className="location-job">{job.location}</p>
-                        <div className="text-description">{regexChange(job.description)}...</div>
-                      </Link>
+                    className={
+                      toggleJob && job.location !== "remote"
+                        ? "hidden"
+                        : null
+                    }
+                    key={id}
+                  >
+                    <div key={job._id} className="blog-card">
+                      <div className="description">
+                        <Link
+                          className="link-apply"
+                          to={{
+                            pathname: `/job/${job._id}`,
+                          }}
+                        >
+                          <h5 className="position-name">{job.position_name}</h5>
+                          <p className="place">{job.workplace_name} <span className="desktop-location">- {job.location}</span> </p>
+                          <p className="location-job">{job.location}</p>
+                          <div className="text-description">{regexChange(job.description)}...</div>
+                        </Link>
+                      </div>
                     </div>
                   </div>
-                </div>
-
+               
               ))}
-            </>
+            </div>
           )}
         />
       </>
