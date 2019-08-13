@@ -42,6 +42,7 @@
     }
     
     .main-input {
+      box-shadow: var(--PrimaryBoxShadow);
       animation-name: going;
       animation-duration: 0.3s;
       padding: 20px 10px 10px 15px;

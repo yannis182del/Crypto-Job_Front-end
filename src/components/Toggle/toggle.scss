@@ -30,44 +30,27 @@ $break-large: 600px;
 }
 
 .green {
+  @include button($green);
+}
+
+.red, .green {
   border: none;
   cursor: pointer;
   font-weight: bold;
   left: 0;
   padding: 10px 0;
   position: relative;
-  border-radius: 10px;
   color: var(--bgPrimary);
   font-family: var(--ftFamily);
   text-align: center;
   font-size: var(--PrimaryFontSize);
   width: 134.61px;
   height: 44px;
-  transition: all 350ms ease-out;
-  box-shadow: -1px 1px 3px #555;
-  user-select: none;
+  transition: all 250ms ease-out;
   border-radius: 21px;
-  @include button($green);
-  
 }
 
 .red {
-  border: none;
-  cursor: pointer;
-  font-weight: bold;
-  left: 0;
-  padding: 10px 0;
-  position: relative;
-  color: var(--bgPrimary);
-  font-family: var(--ftFamily);
-  text-align: center;
-  font-size: var(--PrimaryFontSize);
-  width: 134.61px;
-  height: 44px;
-  transition: all 350ms ease-out;
-  box-shadow: -1px 1px 3px #555;
-  user-select: none;
-  border-radius: 21px;
   left: 144px;
   @include button($blue);
   @media only screen and (min-device-width: $break-large)  {     
@@ -91,6 +74,7 @@ button:focus {
 
 .slider {
   position: absolute;
+  box-shadow: var(--PrimaryBoxShadow);
   width: 280px;
   height: 43px;
   background-color: var(--bgPrimary);

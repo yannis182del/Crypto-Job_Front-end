@@ -8,7 +8,8 @@
   --textColorSecondary: #3eecac;
   --textColorBlue:  #10b7e0;
   --BoldFontWeight: 700;
-  --PrimaryFontSize: 18px
+  --PrimaryFontSize: 18px;
+  --PrimaryBoxShadow:  0 4px 8px 0 rgba(0, 0, 0, 0.4);
 }
 
 html {
