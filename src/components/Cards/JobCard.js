@@ -5,6 +5,7 @@ import FaIcon from "../../assets/FaIcon";
 import MainInput from "../Input/Input";
 import SearchResults from "react-filter-search";
 import ToggleJob from "../Toggle/ToggleJob";
+import Footer from "../footer/Footer"
 
 import { Link } from "react-router-dom";
 import { regexChange } from "../../helper/helper"
@@ -108,6 +109,7 @@ class JobCard extends Component {
             </div>
           )}
         />
+          <Footer />
       </>
       ;
   }

@@ -30,23 +30,6 @@ $break-large: 600px;
 }
 
 .green {
-  @include button($green);
-}
-
-.red {
-  left: 144px;
-  @include button($blue);
-  @media only screen and (min-device-width: $break-large)  {     
-    left: 244px;  
-    }
-}
-
-.button-wrapper {
-  margin: 2px 1px;
-  position: relative;
-}
-
-button {
   border: none;
   cursor: pointer;
   font-weight: bold;
@@ -64,6 +47,42 @@ button {
   box-shadow: -1px 1px 3px #555;
   user-select: none;
   border-radius: 21px;
+  @include button($green);
+  
+}
+
+.red {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  left: 0;
+  padding: 10px 0;
+  position: relative;
+  color: var(--bgPrimary);
+  font-family: var(--ftFamily);
+  text-align: center;
+  font-size: var(--PrimaryFontSize);
+  width: 134.61px;
+  height: 44px;
+  transition: all 350ms ease-out;
+  box-shadow: -1px 1px 3px #555;
+  user-select: none;
+  border-radius: 21px;
+  left: 144px;
+  @include button($blue);
+  @media only screen and (min-device-width: $break-large)  {     
+    left: 244px;  
+    
+    }
+}
+
+.button-wrapper {
+  margin: 2px 1px;
+  position: relative;
+}
+
+button {
+  transition: all 350ms ease-out;
 }
 
 button:focus {
