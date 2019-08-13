@@ -12,19 +12,29 @@ import "./index.css";
 
 function Candidat() {
   return (
-    <div className="candidat-form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div className="candidat-container">
+      <p className="candidat-p">OnchainJobs est gratuit pour les chercheurs d'emploi, déposes ton CV et nous te mettrons en relation avec des entreprises Blockchain si ton CV les intéresse !
+Afin d'etre préparé pour ta recherche, inscris-toi à notre newsletter et mets toutes les chances de ton coté en bénéficiant de conseils exclusifs !</p>
+      <div className="candidat-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
 
       </div>
+    </div>
   )
 }
 
 function Recruteur() {
   return (
-    <div className="candidat-form">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+    <div>
+      <p className="recruteur-p">OnChainJobs est gratuit durant notre lancement, profitez-en !
+      Vous cherchez des talents spécialisés Blockchain ?
+      Laissez-nous vos coordonnées et nous reviendrons vers vous !
+    Pour vous aider dans vos démarches, OnChainJobs s'appuie sur son réseau de partenaires, sa visibilité mais surtout sur son expertise métier au niveau de la technologie et du recrutement.</p>
+      <div className="candidat-form">
+        <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScELoRwcw4m7bW_iPB8QN3qHd2w8ouEMEMgCbBN459gUDgwAA/viewform?embedded=true" width="640" height="814" frameBorder="0" marginHeight="0" marginWidth="0">Loading…</iframe>
 
+      </div>
     </div>
   )
 }
