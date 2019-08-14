@@ -5,12 +5,23 @@ import { Link } from "react-router-dom";
 import JotformEmbed from 'react-jotform-embed';
 
 
+
 import JobCard from "./components/Cards/JobCard";
 import Articles from "./components/Articles/Articles";
 import { ReactComponent as Logo } from "./assets/Images/logo.svg";
 import "./index.css";
 
 
+function Contact() {
+  return (
+    <div className="candidat-container">
+      <p className="candidat-p">OnchainJobs est gratuit pour les chercheurs d'emploi, déposes ton CV et nous te mettrons en relation avec des entreprises Blockchain si ton CV les intéresse !
+Afin d'etre préparé pour ta recherche, inscris-toi à notre newsletter et mets toutes les chances de ton coté en bénéficiant de conseils exclusifs !</p>
+      <div className="candidat-form">
+      </div>
+    </div>
+  )
+}
 
 function Candidat() {
   return (
@@ -18,7 +29,7 @@ function Candidat() {
       <p className="candidat-p">OnchainJobs est gratuit pour les chercheurs d'emploi, déposes ton CV et nous te mettrons en relation avec des entreprises Blockchain si ton CV les intéresse !
 Afin d'etre préparé pour ta recherche, inscris-toi à notre newsletter et mets toutes les chances de ton coté en bénéficiant de conseils exclusifs !</p>
       <div className="candidat-form">
-      <JotformEmbed src="https://form.jotformeu.com/92245174500349" />
+        <JotformEmbed src="https://form.jotformeu.com/92245174500349" />
       </div>
     </div>
   )
@@ -78,6 +89,9 @@ const App = () => (
       <Route path="/job/:id" component={Articles} />
       <Route path="/candidat" component={Candidat} />
       <Route path="/recruteur" component={Recruteur} />
+      <Route path="/contact" component={Contact} />
+      <Route path="/team" component={Contact} />
+      <Route path="/a-propos" component={Contact} />
     </Switch>
   </>
 )

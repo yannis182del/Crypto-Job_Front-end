@@ -33,7 +33,6 @@ body {
 }
 
 .nav {
-
   font-family: var( --ftFamily);
   font-size: 13px;
   list-style:none ;
