@@ -1,32 +1,42 @@
 import React from "react";
-import "./Article.css";
-
+import {ArticleComp,
+   PositionNameArticle,
+   Location,
+   WorkplaceName,
+   LocationName,
+   ContractType,
+   ArticleTitle, 
+   Compensation,
+   AboutDescription,
+   OverView,
+   Skills
+  } from "./styled"
+ 
+  
 export default function ArticleComponent(props) {
   return (
     <>
-      <div className="article-component">
-        <h4 className="position-name-article">{props.position_name}</h4>
-        <p className="location">
-          <span className="workplace-name">{props.workplace_name}</span>{" "}
-          <span className="location-name"> - {props.location}</span>
-        </p>
-        <p className="contract-type">{props.contract_type}</p>
-        <div className="main-content">
-          <h3 className="article-title">About Us</h3>
-          <p className="about-description">{props.description}</p>
-          <h3 className="article-title">Job Overview</h3>
-          <p className="about-description overview">{props.jobOverview}</p>
-          <h3 className="article-title">Skills</h3>
+      <ArticleComp>
+        <PositionNameArticle>{props.position_name}</PositionNameArticle>
+        <Location>
+          <WorkplaceName>{props.workplace_name}</WorkplaceName>{" "}
+          <LocationName> - {props.location}</LocationName>
+        </Location>
+        <ContractType>{props.contract_type}</ContractType>
+          <ArticleTitle>About Us</ArticleTitle>
+          <AboutDescription>{props.description}</AboutDescription>
+          <ArticleTitle>Job Overview</ArticleTitle>
+          <OverView>{props.jobOverview}</OverView>
+          <ArticleTitle>Skills</ArticleTitle>
           <ul>
             {props.skills.map((skill, key) => (
-              <li key={key} className="skills" >{skill}</li>
+              <Skills key={key} >{skill}</Skills>
             )
             )}
           </ul>
-          <h3  className="article-title">Compensation</h3>
-          <p className="compensation">{props.compensation === "" ? "To Discuss" : props.compensation}</p>
-        </div>
-      </div>
+          <ArticleTitle>Compensation</ArticleTitle>
+          <Compensation>{props.compensation === "" ? "To Discuss" : props.compensation}</Compensation>     
+      </ArticleComp>
     </>
   );
 }
