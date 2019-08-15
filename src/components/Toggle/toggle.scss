@@ -30,7 +30,7 @@ $break-large: 600px;
 }
 
 .green {
-  @include button($green);
+  background: linear-gradient(158.36deg, #3EECAC 53.57%, #10B7E0 101.89%);
 }
 
 .red, .green {

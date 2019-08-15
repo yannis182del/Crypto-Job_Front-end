@@ -11,11 +11,8 @@ const Articles = () => {
     query(getJobId(), setJob);
   }, []);
 
-console.log(job)
-  return (
-  
-    job
-    
+  return (  
+    job   
       ? (
         <>
           <ArticleComponent
