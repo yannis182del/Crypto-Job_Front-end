@@ -1,9 +1,7 @@
 import React from 'react'
 import logo from "../../assets/Images/Onchain-logo-lightpurple.png";
 import Form from "../SubscribeForm"
-import { Route, Switch } from "react-router";
 import { Link } from "react-router-dom";
-import { BrowserRouter as Router, withRouter } from "react-router-dom";
 
 
 
@@ -26,7 +24,6 @@ function FooterRouter() {
                     </li>
                 </ul>
         </div>
-
     );
 }
 
@@ -44,17 +41,11 @@ function FooterRouter() {
                     }}
                 />
                 <Form />
-
                 <FooterRouter />
-            </div>
-  
-                    {/* <Route path="/a-propos" component={Candidat} />
-          <Route path="/mentions" component={Recruteur} /> */}
-             
-      
+            </div>      
         </div>
 
     )
 }
 
-export default withRouter(Footer)
+export default Footer
