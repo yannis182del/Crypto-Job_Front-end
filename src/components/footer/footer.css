@@ -20,7 +20,6 @@
 }
 
 .footer-el {
-    
     text-decoration: none;
     color: #BCBACE;
 }
@@ -37,10 +36,14 @@
     font-family: var(--ftFamily);
     font-size: 13px;
     width: 90px;
-    height: 30px;
+    height: 33px;
     box-shadow: -1px 1px 3px #555;
     border-radius: 21px;
     background: var( --textColorBlue) 
+}
+
+.button-text {
+    margin: auto;
 }
 
 .form-title {

@@ -42,11 +42,27 @@
   margin-left: 10px;
 }
 
+.skills {
+  color: var(--txtColorPrimary);
+  margin-top: 5%;
+  margin-left: 5px;
+  line-height: 22px
+}
+
 .about-description {
   color: var(--txtColorPrimary);
   padding: 2px 4px 2px 4px;
   margin-left: 10px;
   line-height: 22px;
+}
+
+.overview {
+  line-height: 25px
+}
+
+.compensation {
+  margin-left: 10px;
+  color: var(--textColorBlue)
 }
 
 @media only screen and (max-device-width: 600px) {
@@ -58,6 +74,13 @@
 @media only screen and (min-device-width: 600px)  {
   .article-component{
     width: 814px;
-    height: 976px;
+    height: 770px;
     }
+    .skills {
+      color: var(--txtColorPrimary);
+      margin-top: 3%;
+      margin-left: 5px;
+      line-height: 22px
+    }
+    
   }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import ArticleComponent from "./ArticleComponent";
 import GradiendButton from "../Buttons/GradientButton"
 import { getJobId, query } from "../../helper/helper"
+import LoadingSpinner from "../Loading-Spinner/LoadingSpinner"
 
 
 const Articles = () => {
@@ -10,9 +11,11 @@ const Articles = () => {
     query(getJobId(), setJob);
   }, []);
 
-
+console.log(job)
   return (
+  
     job
+    
       ? (
         <>
           <ArticleComponent
@@ -21,11 +24,14 @@ const Articles = () => {
             location={job.location}
             contract_type={job.contract_type}
             description={job.description}
+            jobOverview={job.jobOverview}
+            skills={job.skills}
+            compensation={job.Compensation}
           />
           <GradiendButton link={job.link} />
         </>
       )
-      : null
+      : <LoadingSpinner />
   )
 };
 

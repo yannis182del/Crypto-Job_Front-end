@@ -15,9 +15,18 @@ export default function ArticleComponent(props) {
           <h3 className="about">About Us</h3>
           <p className="about-description">{props.description}</p>
           <h3 className="about">Job Overview</h3>
+          <p className="about-description overview">{props.jobOverview}</p>
+          <h3 className="about">Skills</h3>
+          <ul>
+            {props.skills.map((skill, key) => (
+              <li key={key} className="skills" >{skill}</li>
+            )
+            )}
+          </ul>
+          <h3  className="about">Compensation</h3>
+          <p className="compensation">{props.compensation === "" ? "To Discuss" : props.compensation}</p>
         </div>
       </div>
-      
     </>
   );
 }
