@@ -1,31 +1,34 @@
-import React, { Component } from "react";
+import React, { Component } from 'react';
 
-import LoadingSpinner from "../Loading-Spinner/LoadingSpinner";
-import FaIcon from "../../assets/FaIcon";
-import MainInput from "../Input/Input";
-import SearchResults from "react-filter-search";
-import ToggleJob from "../Toggle/ToggleJob";
-import Footer from "../footer/Footer"
+import SearchResults from 'react-filter-search';
+import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import LoadingSpinner from '../Loading-Spinner/LoadingSpinner';
+import FaIcon from '../../assets/FaIcon';
+import MainInput from '../Input/Input';
+import ToggleJob from '../Toggle/ToggleJob';
+import Footer from '../footer/Footer';
 
-import { Link } from "react-router-dom";
-import { regexChange } from "../../helper/helper"
-import { fetchJobs, updateCurrent } from "../../redux/reducers/job";
-import { connect } from "react-redux";
+import { regexChange } from '../../helper/helper';
+import { fetchJobs, updateCurrent } from '../../redux/reducers/job';
 
-import "./JobCard.css";
+import './JobCard.css';
 
 class JobCard extends Component {
-  state = {
-    toggle: false,
-  };
+  constructor() {
+    super();
+    this.state = {
+      toggle: false,
+    };
+  }
 
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchJobs();
   }
 
   render() {
     const { jobs, value, loading, updateCurrent } = this.props;
-    const { toggle, toggleJob } = this.state
+    const { toggle, toggleJob } = this.state;
 
     const handleInputChange = evt => {
       const val = evt.target.value;
@@ -34,21 +37,21 @@ class JobCard extends Component {
 
     const handleClick = () => {
       this.setState({
-        toggleJob: !this.state.toggleJob
+        toggleJob: !toggleJob,
       });
     };
 
     const handleToggle = () => {
       this.setState({
-        toggle: !this.state.toggle
+        toggle: !toggle,
       });
     };
 
-    return loading === true ?
+    return loading === true ? (
       <LoadingSpinner />
-      :
+    ) : (
       <>
-        {toggle === true ?
+        {toggle === true ? (
           <div className="toggle-jobs">
             <MainInput
               onClick={handleToggle}
@@ -59,59 +62,49 @@ class JobCard extends Component {
               onChange={handleInputChange}
             />
           </div>
-          :
+        ) : (
           <>
-            <ToggleJob
-              handleClick={handleClick}
-              isToggleOn={toggleJob}
-              className="toggle-button"
-            />
-            <FaIcon
-              className="fa fa-search side-glass"
-              onClick={handleToggle}
-            />
+            <ToggleJob handleClick={handleClick} isToggleOn={toggleJob} className="toggle-button" />
+            <FaIcon className="fa fa-search side-glass" onClick={handleToggle} />
           </>
-        }
+        )}
 
         <SearchResults
           value={value}
           data={jobs}
           renderResults={results => (
             <div className="card-container">
-              {results.map((job, id) => (
-        
+              {results.map(job => (
                 <div
-                    className={
-                      toggleJob && job.location !== "remote"
-                        ? "hidden"
-                        : null
-                    }
-                    key={id}
-                  >
-                    <div key={job._id} className="blog-card">
-                      <div className="description">
-                        <Link
-                          className="link-apply"
-                          to={{
-                            pathname: `/job/${job._id}`,
-                          }}
-                        >
-                          <h5 className="position-name">{job.position_name}</h5>
-                          <p className="place">{job.workplace_name} <span className="desktop-location">- {job.location}</span> </p>
-                          <p className="location-job">{job.location}</p>
-                          <div className="text-description">{regexChange(job.description)}...</div>
-                        </Link>
-                      </div>
+                  className={toggleJob && job.location !== 'remote' ? 'hidden' : null}
+                  key={job._id}
+                >
+                  <div key={job._id} className="blog-card">
+                    <div className="description">
+                      <Link
+                        className="link-apply"
+                        to={{
+                          pathname: `/job/${job._id}`,
+                        }}
+                      >
+                        <h5 className="position-name">{job.position_name}</h5>
+                        <p className="place">
+                          {job.workplace_name}{' '}
+                          <span className="desktop-location">- {job.location}</span>{' '}
+                        </p>
+                        <p className="location-job">{job.location}</p>
+                        <div className="text-description">{regexChange(job.description)}...</div>
+                      </Link>
                     </div>
                   </div>
-               
+                </div>
               ))}
             </div>
           )}
         />
-          <Footer />
+        <Footer />
       </>
-      ;
+    );
   }
 }
 

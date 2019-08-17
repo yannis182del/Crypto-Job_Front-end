@@ -1,5 +1,6 @@
-import React from "react";
+import React from 'react';
 
 export default function faIcon(props) {
-  return <span className={props.className} onClick={props.onClick} />;
+  const { className, onClick } = props;
+  return <span className={className} onClick={onClick} />;
 }

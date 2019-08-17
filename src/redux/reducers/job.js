@@ -1,22 +1,21 @@
-import { getJobs} from "../../lib/apiServices";
-
+import getJobs from '../../lib/apiServices';
 
 const initialState = {
   jobs: [],
-  value: "",
+  value: '',
   loading: true,
 };
 
-const JOB_LOAD = "JOB_LOAD";
-const CURRENT_UPDATE = "CURRENT_UPDATE";
-const JOB_LOADING = "JOB_LOADING ";
+const JOB_LOAD = 'JOB_LOAD';
+const CURRENT_UPDATE = 'CURRENT_UPDATE';
+const JOB_LOADING = 'JOB_LOADING ';
 
 export const loadJobs = jobs => ({ type: JOB_LOAD, payload: jobs });
 export const updateCurrent = value => ({
   type: CURRENT_UPDATE,
-  payload: value
+  payload: value,
 });
-export const loading = loading => ({ type: JOB_LOADING, payload: loading });
+export const loading = () => ({ type: JOB_LOADING, payload: loading });
 
 export const fetchJobs = () => {
   return dispatch => {
@@ -34,7 +33,7 @@ export default (state = initialState, action) => {
       return { ...state, jobs: action.payload };
     case CURRENT_UPDATE:
       return { ...state, value: action.payload };
-    
+
     default:
       return state;
   }
