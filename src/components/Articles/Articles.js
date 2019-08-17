@@ -13,7 +13,7 @@ const Articles = () => {
   const replaceBreaks = data => {
     const stringAsArr = data
       .split('lb182')
-      .map(str => [str, `${<br />}`])
+      .map(str => [str, <br />])
       .flat();
     return stringAsArr;
   };
