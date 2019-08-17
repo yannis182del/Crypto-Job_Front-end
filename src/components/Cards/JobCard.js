@@ -1,4 +1,6 @@
+/* eslint-disable no-underscore-dangle */
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import SearchResults from 'react-filter-search';
 import { Link } from 'react-router-dom';
@@ -23,7 +25,8 @@ class JobCard extends Component {
   }
 
   componentDidMount() {
-    this.props.fetchJobs();
+    const { fetchJobs } = this.props;
+    fetchJobs();
   }
 
   render() {
@@ -55,7 +58,7 @@ class JobCard extends Component {
           <div className="toggle-jobs">
             <MainInput
               onClick={handleToggle}
-              class="main-input"
+              className="main-input"
               placeholder="Find A Job..."
               type="text"
               value={value}
@@ -107,6 +110,13 @@ class JobCard extends Component {
     );
   }
 }
+
+JobCard.propTypes = {
+  fetchJobs: PropTypes.func.isRequired,
+  value: PropTypes.string.isRequired,
+  loading: PropTypes.bool.isRequired,
+  updateCurrent: PropTypes.func.isRequired,
+};
 
 export default connect(
   state => ({

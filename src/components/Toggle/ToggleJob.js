@@ -1,22 +1,18 @@
-import React from "react";
-import "./toggle.scss";
+import React from 'react';
+import './toggle.scss';
 
-class ToggleJob extends React.Component {
-  render() {
-    return (
-      <div className={this.props.className}>
-        <div className="button-wrapper">
-          <div className="slider" />
-          <button
-            onClick={this.props.handleClick}
-            className={!this.props.isToggleOn ? "green" : "red"}
-          >
-            {!this.props.isToggleOn ? "Hot" : "Remote"}
-          </button>
-        </div>
+const ToggleJob = props => {
+  const { className, handleClick, isToggleOn } = props;
+  return (
+    <div className={className}>
+      <div className="button-wrapper">
+        <div className="slider" />
+        <button type="button" onClick={handleClick} className={!isToggleOn ? 'green' : 'red'}>
+          {!isToggleOn ? 'Hot' : 'Remote'}
+        </button>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default ToggleJob;
