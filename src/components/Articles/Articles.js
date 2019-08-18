@@ -20,6 +20,7 @@ const Articles = () => {
   return job ? (
     <>
       <ArticleComponent
+        key={job._id}
         positionName={job.position_name}
         workPlaceName={job.workplace_name}
         location={job.location}

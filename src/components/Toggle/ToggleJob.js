@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+
 import './toggle.scss';
 
 const ToggleJob = props => {
@@ -13,6 +15,16 @@ const ToggleJob = props => {
       </div>
     </div>
   );
+};
+
+ToggleJob.defaultProps = {
+  isToggleOn: undefined,
+};
+
+ToggleJob.propTypes = {
+  className: PropTypes.string.isRequired,
+  isToggleOn: PropTypes.func,
+  handleClick: PropTypes.func.isRequired,
 };
 
 export default ToggleJob;

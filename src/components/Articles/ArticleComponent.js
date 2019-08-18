@@ -23,6 +23,7 @@ export default function ArticleComponent(props) {
     jobOverview,
     skills,
     compensation,
+    key,
   } = props;
   return (
     <>
@@ -38,7 +39,7 @@ export default function ArticleComponent(props) {
         <OverView>{jobOverview}</OverView>
         <ArticleTitle>Skills</ArticleTitle>
         <ul>
-          {skills.map((skill, key) => (
+          {skills.map(skill => (
             <Skills key={key}>{skill}</Skills>
           ))}
         </ul>
