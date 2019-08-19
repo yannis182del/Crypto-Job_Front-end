@@ -14,6 +14,7 @@ import Footer from '../footer/Footer';
 import { regexChange } from '../../helper/helper';
 import { fetchJobs, updateCurrent } from '../../redux/reducers/job';
 
+import { CardContainer, BlogCard } from './styled';
 import './JobCard.css';
 
 class JobCard extends Component {
@@ -76,13 +77,13 @@ class JobCard extends Component {
           value={value}
           data={jobs}
           renderResults={results => (
-            <div className="card-container">
+            <CardContainer>
               {results.map(job => (
                 <div
                   className={toggleJob && job.location !== 'remote' ? 'hidden' : null}
                   key={job._id}
                 >
-                  <div key={job._id} className="blog-card">
+                  <BlogCard key={job._id}>
                     <div className="description">
                       <Link
                         className="link-apply"
@@ -99,10 +100,10 @@ class JobCard extends Component {
                         <div className="text-description">{regexChange(job.description)}...</div>
                       </Link>
                     </div>
-                  </div>
+                  </BlogCard>
                 </div>
               ))}
-            </div>
+            </CardContainer>
           )}
         />
         <Footer />

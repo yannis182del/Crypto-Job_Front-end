@@ -6,7 +6,7 @@ class ScrollToTop extends Component {
   componentDidUpdate(prevProps) {
     const { location } = this.props;
     if (location.pathname !== prevProps.location.pathname) {
-      window.scrollTo(0, 50);
+      window.scrollTo(0, 0);
     }
   }
 
