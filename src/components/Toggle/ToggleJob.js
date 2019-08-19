@@ -23,7 +23,7 @@ ToggleJob.defaultProps = {
 
 ToggleJob.propTypes = {
   className: PropTypes.string.isRequired,
-  isToggleOn: PropTypes.func,
+  isToggleOn: PropTypes.bool,
   handleClick: PropTypes.func.isRequired,
 };
 
