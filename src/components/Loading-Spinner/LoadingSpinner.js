@@ -1,7 +1,8 @@
 import React from 'react';
 import { css } from '@emotion/core';
 import { SyncLoader } from 'react-spinners';
-import './LoadingSpinner.css';
+
+import { LoadingDiv } from './styled';
 
 const override = css`
   display: block;
@@ -23,9 +24,9 @@ class LoadingSpinner extends React.Component {
   render() {
     const { loading } = this.state;
     return (
-      <div className="sweet-loading">
+      <LoadingDiv>
         <SyncLoader css={override} sizeUnit="px" size={30} color={green} loading={loading} />
-      </div>
+      </LoadingDiv>
     );
   }
 }

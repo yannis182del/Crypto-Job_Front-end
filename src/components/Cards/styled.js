@@ -30,3 +30,9 @@ export const BlogCard = styled.div`
     margin: 15px auto 10px auto;
   }
 `;
+
+export const Hidden = styled.div`
+  display: none;
+`;
+
+export const Div = styled.div``;

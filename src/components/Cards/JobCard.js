@@ -56,16 +56,14 @@ class JobCard extends Component {
     ) : (
       <>
         {toggle === true ? (
-          <div className="toggle-jobs">
-            <MainInput
-              onClick={handleToggle}
-              className="main-input"
-              placeholder="Find A Job..."
-              type="text"
-              value={value}
-              onChange={handleInputChange}
-            />
-          </div>
+          <MainInput
+            onClick={handleToggle}
+            className="main-input"
+            placeholder="Find A Job..."
+            type="text"
+            value={value}
+            onChange={handleInputChange}
+          />
         ) : (
           <>
             <ToggleJob handleClick={handleClick} isToggleOn={toggleJob} className="toggle-button" />
@@ -84,22 +82,20 @@ class JobCard extends Component {
                   key={job._id}
                 >
                   <BlogCard key={job._id}>
-                    <div className="description">
-                      <Link
-                        className="link-apply"
-                        to={{
-                          pathname: `/job/${job._id}`,
-                        }}
-                      >
-                        <h5 className="position-name">{job.position_name}</h5>
-                        <p className="place">
-                          {job.workplace_name}{' '}
-                          <span className="desktop-location">- {job.location}</span>{' '}
-                        </p>
-                        <p className="location-job">{job.location}</p>
-                        <div className="text-description">{regexChange(job.description)}...</div>
-                      </Link>
-                    </div>
+                    <Link
+                      className="link-apply"
+                      to={{
+                        pathname: `/job/${job._id}`,
+                      }}
+                    >
+                      <h5 className="position-name">{job.position_name}</h5>
+                      <p className="place">
+                        {job.workplace_name}{' '}
+                        <span className="desktop-location">- {job.location}</span>{' '}
+                      </p>
+                      <p className="location-job">{job.location}</p>
+                      <div className="text-description">{regexChange(job.description)}...</div>
+                    </Link>
                   </BlogCard>
                 </div>
               ))}
