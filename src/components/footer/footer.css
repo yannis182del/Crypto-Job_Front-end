@@ -1,16 +1,3 @@
-.footer {
-    background: #0B0918;
-    width: 100%;
-    height: 255px; 
-}
-
-.footer-li {
-    margin-left: 16px;
-    line-height: 25px;
-    list-style: none;
-    padding-inline-start: 0px;
-}
-
 
 .footer-logo {
     display: block;

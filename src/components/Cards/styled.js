@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const size = {
   mobileS: '600px',
@@ -36,3 +37,50 @@ export const Hidden = styled.div`
 `;
 
 export const Div = styled.div``;
+
+export const PositionName = styled.h5`
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 21px;
+  color: #ffffff;
+  text-decoration: none;
+  margin: 0;
+`;
+
+export const DesktopLocation = styled.span`
+  @media ${device.mobileS} {
+    display: none;
+  }
+  @media ${device.mobileM} {
+    color: #10b7e0;
+  }
+`;
+
+export const Place = styled.p`
+  color: #3eecac;
+  font-size: 18px;
+  margin-bottom: 2px;
+  @media ${device.mobileM} {
+    margin-bottom: 15px;
+  }
+`;
+
+export const LocationJob = styled.p`
+  color: #10b7e0;
+  margin-bottom: 0;
+  @media ${device.mobileM} {
+    display: none;
+  }
+`;
+
+export const TextDescription = styled.div`
+  color: white;
+  font-size: 18px;
+  @media ${device.mobileS} {
+    display: none;
+  }
+`;
+
+export const StyledLink = styled(Link)`
+  text-decoration: none;
+`;

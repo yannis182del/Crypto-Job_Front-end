@@ -3,19 +3,17 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
 import SearchResults from 'react-filter-search';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import LoadingSpinner from '../Loading-Spinner/LoadingSpinner';
 import FaIcon from '../../assets/FaIcon';
 import MainInput from '../Input/Input';
 import ToggleJob from '../Toggle/ToggleJob';
 import Footer from '../footer/Footer';
+import Cards from './Cards';
 
-import { regexChange } from '../../helper/helper';
 import { fetchJobs, updateCurrent } from '../../redux/reducers/job';
 
-import { CardContainer, BlogCard } from './styled';
-import './JobCard.css';
+import { CardContainer } from './styled';
 
 class JobCard extends Component {
   constructor() {
@@ -55,7 +53,7 @@ class JobCard extends Component {
       <LoadingSpinner />
     ) : (
       <>
-        {toggle === true ? (
+        {toggle ? (
           <MainInput
             onClick={handleToggle}
             className="main-input"
@@ -81,22 +79,16 @@ class JobCard extends Component {
                   className={toggleJob && job.location !== 'remote' ? 'hidden' : null}
                   key={job._id}
                 >
-                  <BlogCard key={job._id}>
-                    <Link
-                      className="link-apply"
-                      to={{
-                        pathname: `/job/${job._id}`,
-                      }}
-                    >
-                      <h5 className="position-name">{job.position_name}</h5>
-                      <p className="place">
-                        {job.workplace_name}{' '}
-                        <span className="desktop-location">- {job.location}</span>{' '}
-                      </p>
-                      <p className="location-job">{job.location}</p>
-                      <div className="text-description">{regexChange(job.description)}...</div>
-                    </Link>
-                  </BlogCard>
+                  <Cards
+                    jobId={job.jobId}
+                    id={job._id}
+                    pathId={job._id}
+                    positionNames={job.position_name}
+                    workplaceNames={job.workplace_name}
+                    locations={job.location}
+                    locationJobs={job.location}
+                    description={job.description}
+                  />
                 </div>
               ))}
             </CardContainer>

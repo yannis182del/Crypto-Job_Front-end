@@ -47,7 +47,7 @@ const CustomForm = ({ status, message, onValidated }) => {
 const Form = () => {
   const url = urlApi;
   return (
-    <div>
+    <>
       <h3 className="form-title">Restez Informés</h3>
       <MailchimpSubscribe
         url={url}
@@ -59,7 +59,7 @@ const Form = () => {
           />
         )}
       />
-    </div>
+    </>
   );
 };
 
