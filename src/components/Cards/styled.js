@@ -14,8 +14,11 @@ const device = {
 export const CardContainer = styled.div`
   display: block;
   padding: 10px 2px 10px 2px;
-  overflow: scroll;
+  overflow: auto;
   height: 750px;
+  @media ${device.mobileM} {
+    height: 550px;
+  }
 `;
 
 export const BlogCard = styled.div`

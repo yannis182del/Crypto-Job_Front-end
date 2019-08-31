@@ -19,9 +19,8 @@
 
    @media only screen and (min-device-width: 600px)  {
     .apply-button{
-      width: 30%;
+      width: 24%;
       margin-left: 35%;
-      margin-bottom: 50px;
-      margin-top: 2%
+      margin-top: 4%
       }
     }

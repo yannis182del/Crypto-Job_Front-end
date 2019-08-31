@@ -25,7 +25,7 @@ class LoadingSpinner extends React.Component {
     const { loading } = this.state;
     return (
       <LoadingDiv>
-        <SyncLoader css={override} sizeUnit="px" size={30} color={green} loading={loading} />
+        <SyncLoader css={override} sizeUnit="px" size={20} color={green} loading={loading} />
       </LoadingDiv>
     );
   }

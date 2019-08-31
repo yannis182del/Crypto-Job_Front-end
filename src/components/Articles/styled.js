@@ -26,12 +26,9 @@ export const ArticleComp = styled.div`
   padding: 10px 2px 10px 2px;
   overflow: scroll;
   border-radius: 12px;
-  @media ${device.mobileS} {
-    height: 570px;
-  }
+  height: 570px;
   @media ${device.mobileM} {
-    width: 814px;
-    height: 770px;
+    width: 614px;
   }
 `;
 
@@ -94,3 +91,5 @@ export const Skills = styled.li`
     margin-top: 3%;
   }
 `;
+
+export const Ul = styled.ul``;

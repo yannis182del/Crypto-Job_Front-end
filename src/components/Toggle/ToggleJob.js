@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 
 import './toggle.scss';
 
-const ToggleJob = props => {
-  const { className, handleClick, isToggleOn } = props;
+const ToggleJob = ({ className, handleClick, isToggleOn }) => {
   return (
     <div className={className}>
       <div className="button-wrapper">

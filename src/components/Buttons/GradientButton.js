@@ -1,12 +1,13 @@
 import React from 'react';
 import './button.css';
 
-export default function GradiendButton(props) {
+export default function GradiendButton({ link, title }) {
   return (
     <button
+      type="button"
       className="apply-button"
       onClick={() => {
-        window.location = props.link;
+        window.location = link;
       }}
     >
       Apply

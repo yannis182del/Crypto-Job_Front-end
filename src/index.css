@@ -20,7 +20,6 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
-  height: 100%;
   background: #16132e;
 }
 
@@ -103,7 +102,7 @@ body {
 @media only screen and (min-device-width: 600px)  {
   .App-logo {
     width: 300px;
-    padding-bottom: 3rem;
+    padding-bottom: 0.8rem;
   }
   .candidat-p, .recruteur-p  {
     margin: 20px 20% 20px 20%;
