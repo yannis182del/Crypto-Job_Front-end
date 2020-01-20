@@ -1,5 +1,4 @@
-If you are looking for a job as a developer or marketing in the blockchain industry, OnchainJobs.io is the place to go.
-At the moment only the landing page is available on https://onchainjobs.io
+Small personal project with React at the end of my coding bootcamp.. It's a blockchain for Devs looking for jobs in the blockchain industry
 
 Mobile View:
 
